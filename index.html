@@ -18,10 +18,18 @@
   body { font-family: 'Noto Sans TC', sans-serif; }
   .fade { opacity: 0; transform: translateY(24px); transition: .8s ease; }
   .fade.show { opacity: 1; transform: none; }
-  .masonry { columns: 1; column-gap: 1rem; }
-  @media (min-width: 640px) { .masonry { columns: 2; } }
-  @media (min-width: 1024px) { .masonry { columns: 3; } }
-  .masonry > * { break-inside: avoid; margin-bottom: 1rem; }
+  /* 藝廊：自動橫向滾動（滑鼠移上去會暫停） */
+  .marquee { overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+  .track { display: flex; gap: 1rem; width: max-content; animation: scroll var(--dur, 45s) linear infinite; }
+  .marquee:hover .track, .marquee:focus-within .track { animation-play-state: paused; }
+  @keyframes scroll { to { transform: translateX(calc(-50% - .5rem)); } }
+  /* 使用者設定「減少動態」時，改為手動左右滑動 */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee { overflow-x: auto; }
+    .track { animation: none; }
+  }
 </style>
 </head>
 <body class="bg-mist text-ink antialiased">
@@ -35,6 +43,7 @@
       <li><a class="hover:text-clay" href="#videos">影片</a></li>
       <li><a class="hover:text-clay" href="#gallery">作品</a></li>
       <li><a class="hover:text-clay" href="#shop">明信片</a></li>
+      <li><a class="hover:text-clay" href="#contact">聯絡</a></li>
     </ul>
   </nav>
 </header>
@@ -95,8 +104,8 @@
 <section id="gallery" class="max-w-6xl mx-auto px-5 py-24 fade">
   <p class="text-moss tracking-widest text-sm mb-2">GALLERY</p>
   <h2 class="font-serif text-3xl font-bold text-forest mb-10">攝影作品</h2>
-  <div id="galleryGrid" class="masonry"></div>
-  <p class="text-center mt-8 text-sm text-ink/60">更多作品請至 <a class="text-clay hover:underline" href="https://www.instagram.com/student_lai_photo/" target="_blank" rel="noopener">Instagram</a></p>
+  <div class="marquee"><div id="galleryGrid" class="track"></div></div>
+  <p class="text-center mt-8 text-sm text-ink/60">滑鼠移上去可暫停，點擊可放大。更多作品請至 <a class="text-clay hover:underline" href="https://www.instagram.com/student_lai_photo/" target="_blank" rel="noopener">Instagram</a></p>
 </section>
 
 <!-- Lightbox -->
@@ -120,9 +129,22 @@
   </div>
 </section>
 
-<!-- ========== 6. 頁尾 ========== -->
+<!-- ========== 6. 聯絡我 ========== -->
+<section id="contact" class="max-w-3xl mx-auto px-5 py-24 text-center fade">
+  <p class="text-moss tracking-widest text-sm mb-2">CONTACT</p>
+  <h2 class="font-serif text-3xl font-bold text-forest mb-4">聯絡我</h2>
+  <p class="text-ink/70 leading-8">合作邀約、攝影授權、明信片訂購，歡迎來信或私訊。</p>
+  <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
+    <a data-mailto data-email class="px-7 py-3 rounded-full bg-forest text-white font-medium hover:bg-clay transition"></a>
+    <button id="copyMail" class="px-7 py-3 rounded-full border border-forest/40 text-forest hover:bg-forest hover:text-white transition">複製信箱</button>
+  </div>
+  <div class="mt-8 flex justify-center gap-4" id="contactSocial"></div>
+</section>
+
+<!-- ========== 7. 頁尾 ========== -->
 <footer class="bg-ink text-white/70 py-12 text-center">
   <div class="flex justify-center gap-4 mb-5" id="footSocial"></div>
+  <p class="text-sm mb-2"><a data-mailto data-email class="hover:text-white"></a></p>
   <p class="text-sm">© <span id="year"></span> 賴同學 Student Lai. All rights reserved.</p>
 </footer>
 
@@ -130,6 +152,9 @@
 /* =====================================================
    ★ 內容設定區：要改文字、圖片、影片 ID、價格，只需改這裡 ★
    ===================================================== */
+
+// 聯絡信箱（頁面上所有信箱位置都會自動套用這裡）
+const EMAIL = 'tom91628@gmail.com';
 
 // 社群連結
 const SOCIAL = [
@@ -180,7 +205,18 @@ function socialHTML(cls) {
 }
 $('#heroSocial').innerHTML = socialHTML('bg-white/15 backdrop-blur text-white hover:bg-white hover:text-forest');
 $('#footSocial').innerHTML = socialHTML('bg-white/10 text-white hover:bg-clay');
+$('#contactSocial').innerHTML = socialHTML('bg-forest/10 text-forest hover:bg-forest hover:text-white');
 $('#year').textContent = new Date().getFullYear();
+
+// 信箱：填入文字與 mailto 連結
+document.querySelectorAll('[data-email]').forEach(el => { el.textContent = EMAIL; });
+document.querySelectorAll('[data-mailto]').forEach(el => { el.href = 'mailto:' + EMAIL; });
+$('#copyMail').addEventListener('click', async e => {
+  const btn = e.currentTarget;
+  try { await navigator.clipboard.writeText(EMAIL); btn.textContent = '已複製'; }
+  catch { btn.textContent = '請手動複製：' + EMAIL; }
+  setTimeout(() => { btn.textContent = '複製信箱'; }, 2000);
+});
 
 // 影片：點擊縮圖才載入 iframe（頁面更快）
 $('#videoGrid').innerHTML = VIDEOS.map((v, i) => {
@@ -205,18 +241,23 @@ document.querySelectorAll('[data-vid]').forEach(el => el.addEventListener('click
     title="${v.title}" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
 }));
 
-// 藝廊
-$('#galleryGrid').innerHTML = GALLERY.map((g, i) => `
-  <button data-i="${i}" class="block w-full overflow-hidden rounded-xl group bg-forest/10">
-    <img src="${g.src}" alt="${g.cap}" loading="lazy" class="w-full group-hover:scale-105 transition duration-700">
-  </button>`).join('');
+// 藝廊：把相片列表複製一份接在後面，捲動時才能無縫循環
+const galleryItem = (g, i, dup) => `
+  <button data-i="${i}" ${dup ? 'aria-hidden="true" tabindex="-1"' : ''} class="shrink-0 h-60 sm:h-80 overflow-hidden rounded-xl group bg-forest/10">
+    <img src="${encodeURI(g.src)}" alt="${g.cap}" class="h-full w-auto max-w-none group-hover:scale-105 transition duration-700">
+  </button>`;
+$('#galleryGrid').innerHTML =
+  GALLERY.map((g, i) => galleryItem(g, i, false)).join('') +
+  GALLERY.map((g, i) => galleryItem(g, i, true)).join('');
+// 滾動速度：每張約 7 秒，想更快就把 7 改小
+$('#galleryGrid').style.setProperty('--dur', GALLERY.length * 7 + 's');
 
 // Lightbox
 let cur = 0;
 const lb = $('#lightbox');
 function showLb(i) {
   cur = (i + GALLERY.length) % GALLERY.length;
-  $('#lbImg').src = GALLERY[cur].src; $('#lbCap').textContent = GALLERY[cur].cap;
+  $('#lbImg').src = encodeURI(GALLERY[cur].src); $('#lbCap').textContent = GALLERY[cur].cap;
   lb.classList.remove('hidden'); lb.classList.add('flex');
 }
 function hideLb() { lb.classList.add('hidden'); lb.classList.remove('flex'); }
