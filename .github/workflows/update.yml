@@ -1,0 +1,28 @@
+# .github/workflows/update.yml
+# 每天自動抓取 YouTube／Instagram 內容並更新 travels.json；也可到 Actions 頁面手動按「Run workflow」
+name: Update travels
+on:
+  schedule:
+    - cron: '17 20 * * *'        # 每天 UTC 20:17（台灣時間 04:17）
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Fetch posts and videos
+        run: node scripts/update-travels.mjs
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      - name: Commit changes
+        run: |
+          git config user.name "travel-bot"
+          git config user.email "travel-bot@users.noreply.github.com"
+          git add travels.json ig 2>/dev/null || git add travels.json
+          git diff --cached --quiet || (git commit -m "Update travels" && git push)
