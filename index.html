@@ -18,18 +18,14 @@
   body { font-family: 'Noto Sans TC', sans-serif; }
   .fade { opacity: 0; transform: translateY(24px); transition: .8s ease; }
   .fade.show { opacity: 1; transform: none; }
-  /* 藝廊：自動橫向滾動（滑鼠移上去會暫停） */
-  .marquee { overflow: hidden;
+  /* 藝廊：自動滾動，也可左右滑動／拖曳 */
+  .marquee { overflow-x: auto; cursor: grab; scrollbar-width: none;
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
             mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
-  .track { display: flex; gap: 1rem; width: max-content; animation: scroll var(--dur, 45s) linear infinite; }
-  .marquee:hover .track, .marquee:focus-within .track { animation-play-state: paused; }
-  @keyframes scroll { to { transform: translateX(calc(-50% - .5rem)); } }
-  /* 使用者設定「減少動態」時，改為手動左右滑動 */
-  @media (prefers-reduced-motion: reduce) {
-    .marquee { overflow-x: auto; }
-    .track { animation: none; }
-  }
+  .marquee::-webkit-scrollbar { display: none; }
+  .marquee.grabbing { cursor: grabbing; }
+  .marquee img { user-select: none; -webkit-user-drag: none; }
+  .track { display: flex; gap: 1rem; width: max-content; }
 </style>
 </head>
 <body class="bg-mist text-ink antialiased">
@@ -105,7 +101,7 @@
   <p class="text-moss tracking-widest text-sm mb-2">GALLERY</p>
   <h2 class="font-serif text-3xl font-bold text-forest mb-10">攝影作品</h2>
   <div class="marquee"><div id="galleryGrid" class="track"></div></div>
-  <p class="text-center mt-8 text-sm text-ink/60">滑鼠移上去可暫停，點擊可放大。更多作品請至 <a class="text-clay hover:underline" href="https://www.instagram.com/student_lai_photo/" target="_blank" rel="noopener">Instagram</a></p>
+  <p class="text-center mt-8 text-sm text-ink/60">可左右滑動或拖曳，點擊可放大。更多作品請至 <a class="text-clay hover:underline" href="https://www.instagram.com/student_lai_photo/" target="_blank" rel="noopener">Instagram</a></p>
 </section>
 
 <!-- Lightbox -->
@@ -134,17 +130,14 @@
   <p class="text-moss tracking-widest text-sm mb-2">CONTACT</p>
   <h2 class="font-serif text-3xl font-bold text-forest mb-4">聯絡我</h2>
   <p class="text-ink/70 leading-8">合作邀約、攝影授權、明信片訂購，歡迎來信或私訊。</p>
-  <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
-    <a data-mailto data-email class="px-7 py-3 rounded-full bg-forest text-white font-medium hover:bg-clay transition"></a>
-    <button id="copyMail" class="px-7 py-3 rounded-full border border-forest/40 text-forest hover:bg-forest hover:text-white transition">複製信箱</button>
-  </div>
+  <p class="mt-8 font-serif text-xl sm:text-2xl text-forest"><span data-email></span></p>
   <div class="mt-8 flex justify-center gap-4" id="contactSocial"></div>
 </section>
 
 <!-- ========== 7. 頁尾 ========== -->
 <footer class="bg-ink text-white/70 py-12 text-center">
   <div class="flex justify-center gap-4 mb-5" id="footSocial"></div>
-  <p class="text-sm mb-2"><a data-mailto data-email class="hover:text-white"></a></p>
+  <p class="text-sm mb-2"><span data-email></span></p>
   <p class="text-sm">© <span id="year"></span> 賴同學 Student Lai. All rights reserved.</p>
 </footer>
 
@@ -208,15 +201,8 @@ $('#footSocial').innerHTML = socialHTML('bg-white/10 text-white hover:bg-clay');
 $('#contactSocial').innerHTML = socialHTML('bg-forest/10 text-forest hover:bg-forest hover:text-white');
 $('#year').textContent = new Date().getFullYear();
 
-// 信箱：填入文字與 mailto 連結
+// 信箱：只顯示文字
 document.querySelectorAll('[data-email]').forEach(el => { el.textContent = EMAIL; });
-document.querySelectorAll('[data-mailto]').forEach(el => { el.href = 'mailto:' + EMAIL; });
-$('#copyMail').addEventListener('click', async e => {
-  const btn = e.currentTarget;
-  try { await navigator.clipboard.writeText(EMAIL); btn.textContent = '已複製'; }
-  catch { btn.textContent = '請手動複製：' + EMAIL; }
-  setTimeout(() => { btn.textContent = '複製信箱'; }, 2000);
-});
 
 // 影片：點擊縮圖才載入 iframe（頁面更快）
 $('#videoGrid').innerHTML = VIDEOS.map((v, i) => {
@@ -244,13 +230,57 @@ document.querySelectorAll('[data-vid]').forEach(el => el.addEventListener('click
 // 藝廊：把相片列表複製一份接在後面，捲動時才能無縫循環
 const galleryItem = (g, i, dup) => `
   <button data-i="${i}" ${dup ? 'aria-hidden="true" tabindex="-1"' : ''} class="shrink-0 h-60 sm:h-80 overflow-hidden rounded-xl group bg-forest/10">
-    <img src="${encodeURI(g.src)}" alt="${g.cap}" class="h-full w-auto max-w-none group-hover:scale-105 transition duration-700">
+    <img src="${encodeURI(g.src)}" alt="${g.cap}" draggable="false" class="h-full w-auto max-w-none group-hover:scale-105 transition duration-700">
   </button>`;
 $('#galleryGrid').innerHTML =
   GALLERY.map((g, i) => galleryItem(g, i, false)).join('') +
   GALLERY.map((g, i) => galleryItem(g, i, true)).join('');
-// 滾動速度：每張約 7 秒，想更快就把 7 改小
-$('#galleryGrid').style.setProperty('--dur', GALLERY.length * 7 + 's');
+// 藝廊：自動滾動，同時支援手動滑動（觸控滑動、觸控板、滑鼠拖曳）
+const mq = document.querySelector('.marquee');
+const track = $('#galleryGrid');
+const SPEED = 40;  // 自動滾動速度（像素／秒），想更快就調大，例如 70
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let pos = 0, paused = false, dragging = false, moved = false, sx = 0, sl = 0, resumeTimer, last = performance.now();
+const loopWidth = () => (track.scrollWidth + 16) / 2;  // 一整份相片的寬度（含間距）
+function hold(resumeAfter) {  // 暫停自動滾動；resumeAfter 毫秒後自動恢復
+  paused = true; clearTimeout(resumeTimer);
+  if (resumeAfter) resumeTimer = setTimeout(() => { pos = mq.scrollLeft; paused = false; }, resumeAfter);
+}
+function tick(now) {
+  const dt = Math.min(now - last, 100) / 1000; last = now;
+  if (!paused && !dragging && !reduceMotion) {
+    pos += SPEED * dt;
+    const w = loopWidth();
+    if (pos >= w) pos -= w;
+    mq.scrollLeft = pos;
+  }
+  requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+// 手動滑動到頭尾時無縫接回（兩份內容相同，畫面不會跳動）
+mq.addEventListener('scroll', () => {
+  const w = loopWidth();
+  if (mq.scrollLeft >= w) mq.scrollLeft -= w;
+  else if (mq.scrollLeft <= 0) mq.scrollLeft += w;
+});
+mq.addEventListener('mouseenter', () => hold());
+mq.addEventListener('mouseleave', () => hold(600));
+mq.addEventListener('wheel', () => hold(2500), { passive: true });
+mq.addEventListener('touchstart', () => hold(), { passive: true });
+mq.addEventListener('touchend', () => hold(3000), { passive: true });
+mq.addEventListener('focusin', () => hold());
+mq.addEventListener('focusout', () => hold(1000));
+// 滑鼠拖曳
+mq.addEventListener('mousedown', e => { dragging = true; moved = false; sx = e.clientX; sl = mq.scrollLeft; mq.classList.add('grabbing'); });
+window.addEventListener('mousemove', e => {
+  if (!dragging) return;
+  const dx = e.clientX - sx;
+  if (Math.abs(dx) > 5) moved = true;
+  mq.scrollLeft = sl - dx;
+});
+window.addEventListener('mouseup', () => { if (dragging) { dragging = false; mq.classList.remove('grabbing'); pos = mq.scrollLeft; } });
+mq.addEventListener('click', e => { if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; } }, true);  // 拖曳後不要誤觸放大
+mq.addEventListener('dragstart', e => e.preventDefault());
 
 // Lightbox
 let cur = 0;
