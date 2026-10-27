@@ -190,7 +190,7 @@
    ===================================================== */
 
 // 聯絡信箱（頁面上所有信箱位置都會自動套用這裡）
-const EMAIL = 'tom91628@gmail.com';
+const EMAIL = 'stdlai.photo@gmail.com';
 
 // 社群連結
 const SOCIAL = [
@@ -235,15 +235,7 @@ const PRODUCTS = [
 // 地圖上會自動分成「Instagram 貼文」「Instagram Reels」「YouTube 影片」三個分頁
 const ig = (place, title, url, img) => ({ type: 'post', place, title, url, img });  // 貼文簡寫
 const vid = (i, place) => ({ type: 'video', id: VIDEOS[i].id, title: VIDEOS[i].title, place });  // 直接沿用上方 VIDEOS 的資料
-const TRAVELS = {
-  '雲林縣': [
-    ig('古坑｜木馬古道', '木馬古道的清晨', 'https://www.instagram.com/student_lai_photo/', 'PXL_20260921_025141421.jpeg'),
-    vid(0, '橫貫台灣的起點')
-  ],
-  '南投縣': [vid(1, '合歡山'), vid(2, '塔塔加'), vid(0, '中央山脈')],
-  '臺中市': [vid(1, '梨山')],
-  '花蓮縣': [vid(0, '太魯閣'), vid(1, '中橫公路')]
-};
+const TRAVELS = {};
 
 /* =====================================================
    以下為渲染與互動邏輯，一般不需修改
