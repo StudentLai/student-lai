@@ -6,6 +6,10 @@
 <title>賴同學 Student Lai｜台灣山岳攝影師・旅遊影音創作者</title>
 <meta name="description" content="台灣山岳／風景攝影、YouTube 旅遊 VLOG 與手作風景明信片。">
 <script src="https://cdn.tailwindcss.com"></script>
+<!-- 足跡地圖用：d3-geo（地圖投影）與 topojson-client（讀取地圖資料） -->
+<script src="https://cdn.jsdelivr.net/npm/d3-array@3.2.4/dist/d3-array.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo@3.1.1/dist/d3-geo.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700&display=swap" rel="stylesheet">
 <script>
   tailwind.config = { theme: { extend: {
@@ -26,6 +30,16 @@
   .marquee.grabbing { cursor: grabbing; }
   .marquee img { user-select: none; -webkit-user-drag: none; }
   .track { display: flex; gap: 1rem; width: max-content; }
+  .marquee.static { -webkit-mask-image: none; mask-image: none; }
+  /* 足跡地圖 */
+  #twLayer { transform-origin: 0 0; transition: transform .9s cubic-bezier(.4, 0, .2, 1); }
+  .county { fill: #e6e3d8; stroke: #fff; stroke-width: 1; vector-effect: non-scaling-stroke; transition: fill .3s, opacity .6s; }
+  .county.visited { fill: #a9c2ae; cursor: pointer; }
+  .county.visited:hover { fill: #6b8f71; }
+  .county.active { fill: #2f4a3c !important; }
+  #twMap.zoomed .county:not(.active) { opacity: .25; }
+  .pin { fill: #c47a4a; stroke: #fff; stroke-width: 1.5; vector-effect: non-scaling-stroke; pointer-events: none; transition: opacity .5s; }
+  #twMap.zoomed .pin:not(.active) { opacity: 0; }
 </style>
 </head>
 <body class="bg-mist text-ink antialiased">
@@ -38,6 +52,7 @@
       <li><a class="hover:text-clay" href="#about">關於我</a></li>
       <li><a class="hover:text-clay" href="#videos">影片</a></li>
       <li><a class="hover:text-clay" href="#gallery">作品</a></li>
+      <li><a class="hover:text-clay" href="#map">足跡</a></li>
       <li><a class="hover:text-clay" href="#shop">明信片</a></li>
       <li><a class="hover:text-clay" href="#contact">聯絡</a></li>
     </ul>
@@ -115,6 +130,33 @@
   <button id="lbNext" class="absolute right-3 sm:right-8 text-white text-4xl p-3" aria-label="下一張">›</button>
 </div>
 
+<!-- ========== 足跡地圖 ========== -->
+<section id="map" class="max-w-6xl mx-auto px-5 py-24 fade">
+  <p class="text-moss tracking-widest text-sm mb-2">MAP</p>
+  <h2 class="font-serif text-3xl font-bold text-forest mb-3">台灣足跡地圖</h2>
+  <p class="text-ink/70 mb-10">綠色是我去過的縣市，點擊即可放大，查看我在當地發布的貼文與旅行影片。</p>
+  <div class="grid lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)] gap-8 items-start">
+    <div class="relative rounded-2xl bg-white shadow overflow-hidden">
+      <svg id="twMap" viewBox="0 0 520 680" class="w-full h-auto block" role="img" aria-label="台灣地圖"><g id="twLayer"></g></svg>
+      <p id="mapMsg" class="absolute inset-0 flex items-center justify-center text-sm text-ink/50">地圖載入中…</p>
+    </div>
+    <div id="mapPanel" class="min-w-0 scroll-mt-20">
+      <div id="mapIntro">
+        <p class="text-sm text-ink/60 mb-4">點擊地圖上的綠色縣市，或直接選擇：</p>
+        <div id="mapChips" class="flex flex-wrap gap-2"></div>
+      </div>
+      <div id="mapDetail" class="hidden">
+        <div class="flex items-end justify-between mb-5">
+          <div><h3 id="mapTitle" class="font-serif text-2xl font-bold text-forest"></h3><p id="mapCount" class="text-sm text-ink/60 mt-1"></p></div>
+          <button id="mapBack" class="text-sm text-clay hover:underline">← 回到全台灣</button>
+        </div>
+        <div class="marquee"><div id="mapTrack" class="track"></div></div>
+        <p class="text-xs text-ink/50 mt-4">可左右滑動或拖曳，點擊卡片前往原貼文或影片。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ========== 5. 明信片商品 ========== -->
 <section id="shop" class="bg-forest text-white py-24 fade">
   <div class="max-w-6xl mx-auto px-5">
@@ -185,6 +227,21 @@ const PRODUCTS = [
   { img: u('photo-1469474968028-56623f02e42e'), name: '山岳風景套組（3 張）', desc: '精選三款人氣作品，適合收藏或送禮。', price: 'NT$ 319', shopUrl: '' }
 ];
 
+// 足跡地圖：每個縣市放你在當地發布的貼文／影片（有放資料的縣市會自動變綠並標記）
+// 縣市名稱請用全名，例如 '花蓮縣'、'臺中市'（「台」「臺」皆可）
+// 影片：type:'video'，id 同影片 ID；貼文：type:'post'，url 填貼文網址、img 填封面圖路徑
+// 下面是範例，縣市與內容請依你實際去過的地方修改
+const vid = (i, place) => ({ type: 'video', id: VIDEOS[i].id, title: VIDEOS[i].title, place });  // 直接沿用上方 VIDEOS 的資料
+const TRAVELS = {
+  '雲林縣': [
+    { type: 'post', place: '古坑｜木馬古道', title: '木馬古道的清晨', url: 'https://www.instagram.com/student_lai_photo/', img: 'PXL_20260921_025141421.jpeg' },
+    vid(0, '橫貫台灣的起點')
+  ],
+  '南投縣': [vid(1, '合歡山'), vid(2, '塔塔加'), vid(0, '中央山脈')],
+  '臺中市': [vid(1, '梨山')],
+  '花蓮縣': [vid(0, '太魯閣'), vid(1, '中橫公路')]
+};
+
 /* =====================================================
    以下為渲染與互動邏輯，一般不需修改
    ===================================================== */
@@ -235,52 +292,61 @@ const galleryItem = (g, i, dup) => `
 $('#galleryGrid').innerHTML =
   GALLERY.map((g, i) => galleryItem(g, i, false)).join('') +
   GALLERY.map((g, i) => galleryItem(g, i, true)).join('');
-// 藝廊：自動滾動，同時支援手動滑動（觸控滑動、觸控板、滑鼠拖曳）
-const mq = document.querySelector('.marquee');
-const track = $('#galleryGrid');
-const SPEED = 40;  // 自動滾動速度（像素／秒），想更快就調大，例如 70
+// 可自動滾動、也能手動滑動的橫向列（藝廊與足跡地圖共用）
+// 手動操作時會暫停，放開後自動繼續；speed 是自動滾動速度（像素／秒）
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-let pos = 0, paused = false, dragging = false, moved = false, sx = 0, sl = 0, resumeTimer, last = performance.now();
-const loopWidth = () => (track.scrollWidth + 16) / 2;  // 一整份相片的寬度（含間距）
-function hold(resumeAfter) {  // 暫停自動滾動；resumeAfter 毫秒後自動恢復
-  paused = true; clearTimeout(resumeTimer);
-  if (resumeAfter) resumeTimer = setTimeout(() => { pos = mq.scrollLeft; paused = false; }, resumeAfter);
-}
-function tick(now) {
-  const dt = Math.min(now - last, 100) / 1000; last = now;
-  if (!paused && !dragging && !reduceMotion) {
-    pos += SPEED * dt;
-    const w = loopWidth();
-    if (pos >= w) pos -= w;
-    mq.scrollLeft = pos;
-  }
+function initMarquee(mq, track, speed = 40) {
+  const S = { copies: 2, loop: true, pos: 1, paused: false, dragging: false, moved: false, sx: 0, sl: 0, timer: 0, last: performance.now() };
+  const loopW = () => (track.scrollWidth + 16) / S.copies;  // 一整份內容的寬度（含間距）
+  const hold = ms => {
+    S.paused = true; clearTimeout(S.timer);
+    if (ms) S.timer = setTimeout(() => { S.pos = mq.scrollLeft; S.paused = false; }, ms);
+  };
+  const tick = now => {
+    const dt = Math.min(now - S.last, 100) / 1000; S.last = now;
+    const w = loopW();
+    if (S.loop && !S.paused && !S.dragging && !reduceMotion && mq.clientWidth && w > 50) {
+      S.pos += speed * dt;
+      if (S.pos >= w) S.pos -= w;
+      mq.scrollLeft = S.pos;
+    }
+    requestAnimationFrame(tick);
+  };
   requestAnimationFrame(tick);
+  // 手動滑到頭尾時無縫接回（內容重複，畫面不會跳動）
+  mq.addEventListener('scroll', () => {
+    if (!S.loop) return;
+    const w = loopW();
+    if (w <= 50) return;
+    if (mq.scrollLeft >= w) mq.scrollLeft -= w;
+    else if (mq.scrollLeft <= 0) mq.scrollLeft += w;
+  });
+  mq.addEventListener('mouseenter', () => hold());
+  mq.addEventListener('mouseleave', () => hold(600));
+  mq.addEventListener('wheel', () => hold(2500), { passive: true });
+  mq.addEventListener('touchstart', () => hold(), { passive: true });
+  mq.addEventListener('touchend', () => hold(3000), { passive: true });
+  mq.addEventListener('focusin', () => hold());
+  mq.addEventListener('focusout', () => hold(1000));
+  // 滑鼠拖曳
+  mq.addEventListener('mousedown', e => { S.dragging = true; S.moved = false; S.sx = e.clientX; S.sl = mq.scrollLeft; mq.classList.add('grabbing'); });
+  window.addEventListener('mousemove', e => {
+    if (!S.dragging) return;
+    const dx = e.clientX - S.sx;
+    if (Math.abs(dx) > 5) S.moved = true;
+    mq.scrollLeft = S.sl - dx;
+  });
+  window.addEventListener('mouseup', () => { if (S.dragging) { S.dragging = false; mq.classList.remove('grabbing'); S.pos = mq.scrollLeft; } });
+  mq.addEventListener('click', e => { if (S.moved) { e.stopPropagation(); e.preventDefault(); S.moved = false; } }, true);  // 拖曳後不誤觸點擊
+  mq.addEventListener('dragstart', e => e.preventDefault());
+  // 內容更換時呼叫：copies＝內容重複份數，loop＝是否自動循環（內容太少時關閉）
+  return { set(copies, loop) {
+    S.copies = copies; S.loop = loop; S.pos = loop ? 1 : 0;
+    mq.classList.toggle('static', !loop);
+    mq.scrollLeft = S.pos;
+  } };
 }
-requestAnimationFrame(tick);
-// 手動滑動到頭尾時無縫接回（兩份內容相同，畫面不會跳動）
-mq.addEventListener('scroll', () => {
-  const w = loopWidth();
-  if (mq.scrollLeft >= w) mq.scrollLeft -= w;
-  else if (mq.scrollLeft <= 0) mq.scrollLeft += w;
-});
-mq.addEventListener('mouseenter', () => hold());
-mq.addEventListener('mouseleave', () => hold(600));
-mq.addEventListener('wheel', () => hold(2500), { passive: true });
-mq.addEventListener('touchstart', () => hold(), { passive: true });
-mq.addEventListener('touchend', () => hold(3000), { passive: true });
-mq.addEventListener('focusin', () => hold());
-mq.addEventListener('focusout', () => hold(1000));
-// 滑鼠拖曳
-mq.addEventListener('mousedown', e => { dragging = true; moved = false; sx = e.clientX; sl = mq.scrollLeft; mq.classList.add('grabbing'); });
-window.addEventListener('mousemove', e => {
-  if (!dragging) return;
-  const dx = e.clientX - sx;
-  if (Math.abs(dx) > 5) moved = true;
-  mq.scrollLeft = sl - dx;
-});
-window.addEventListener('mouseup', () => { if (dragging) { dragging = false; mq.classList.remove('grabbing'); pos = mq.scrollLeft; } });
-mq.addEventListener('click', e => { if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; } }, true);  // 拖曳後不要誤觸放大
-mq.addEventListener('dragstart', e => e.preventDefault());
+initMarquee(document.querySelector('#gallery .marquee'), $('#galleryGrid'));
 
 // Lightbox
 let cur = 0;
@@ -302,6 +368,89 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') showLb(cur - 1);
   if (e.key === 'ArrowRight') showLb(cur + 1);
 });
+
+// ===== 足跡地圖 =====
+const mapMarquee = initMarquee(document.querySelector('#mapDetail .marquee'), $('#mapTrack'));
+const travelCard = it => {
+  const isVideo = it.type === 'video';
+  const href = isVideo ? `https://www.youtube.com/watch?v=${it.id}` : it.url;
+  const img = isVideo ? `https://img.youtube.com/vi/${it.id}/hqdefault.jpg` : encodeURI(it.img);
+  return `<a href="${href}" target="_blank" rel="noopener" draggable="false" class="shrink-0 w-64 sm:w-72 block rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition">
+    <div class="relative aspect-video bg-forest/10">
+      <img src="${img}" alt="" draggable="false" class="w-full h-full object-cover">
+      <span class="absolute left-3 top-3 text-xs px-2 py-0.5 rounded-full bg-black/55 text-white">${isVideo ? '▶ 影片' : '貼文'}</span>
+    </div>
+    <div class="p-4"><p class="text-xs text-moss">${it.place || ''}</p><h4 class="font-medium text-forest text-sm mt-1 line-clamp-2">${it.title}</h4></div>
+  </a>`;
+};
+(async function initTravelMap() {
+  const W = 520, H = 680, svg = $('#twMap'), layer = $('#twLayer');
+  const norm = n => n.replace(/台/g, '臺');
+  const T = {};
+  Object.keys(TRAVELS).forEach(k => { T[norm(k)] = { label: k, items: TRAVELS[k] }; });
+  let fc;
+  try {
+    // 地圖資料：內政部縣市界線（taiwan-atlas，MIT 授權）
+    const topo = await (await fetch('https://cdn.jsdelivr.net/npm/taiwan-atlas/counties-10t.json')).json();
+    fc = topojson.feature(topo, topo.objects.counties);
+  } catch (err) { $('#mapMsg').textContent = '地圖載入失敗，請重新整理頁面'; return; }
+  $('#mapMsg').remove();
+
+  // 金門、連江距離本島很遠，改以小圖放在左側角落
+  const INSET = { '金門縣': [[16, H - 98], [120, H - 28]], '連江縣': [[16, 28], [110, 96]] };
+  const main = fc.features.filter(f => !INSET[norm(f.properties.COUNTYNAME)]);
+  const mainProj = d3.geoMercator().fitExtent([[28, 28], [W - 28, H - 28]], { type: 'FeatureCollection', features: main });
+  const recs = fc.features.map(f => {
+    const name = norm(f.properties.COUNTYNAME), box = INSET[name];
+    const gp = d3.geoPath(box ? d3.geoMercator().fitExtent(box, f) : mainProj);
+    return { name, d: gp(f), bounds: gp.bounds(f), c: gp.centroid(f), trip: T[name] };
+  });
+  layer.innerHTML =
+    recs.map(r => `<path class="county${r.trip ? ' visited' : ''}" data-n="${r.name}" d="${r.d}"/>`).join('') +
+    recs.filter(r => r.trip).map(r => `<circle class="pin" data-n="${r.name}" cx="${r.c[0]}" cy="${r.c[1]}" r="4.5"/>`).join('');
+  $('#mapChips').innerHTML = Object.keys(T).map(k => `<button data-c="${k}" class="px-4 py-1.5 rounded-full bg-forest/10 text-forest text-sm hover:bg-forest hover:text-white transition">${T[k].label}<span class="opacity-60 ml-1.5">${T[k].items.length}</span></button>`).join('');
+
+  let active = null;
+  function zoom(r) {  // r 為空＝回到全台灣
+    let k = 1, tx = 0, ty = 0;
+    if (r) {
+      const [[x0, y0], [x1, y1]] = r.bounds;
+      k = Math.min(W * .7 / (x1 - x0), H * .7 / (y1 - y0), 9);
+      tx = W / 2 - k * (x0 + x1) / 2; ty = H / 2 - k * (y0 + y1) / 2;
+    }
+    layer.style.transform = `translate(${tx}px, ${ty}px) scale(${k})`;
+    layer.querySelectorAll('.pin').forEach(c => c.setAttribute('r', 4.5 / k));  // 放大時圖釘維持原大小
+  }
+  function select(name) {
+    const r = recs.find(x => x.name === name);
+    if (!r || !r.trip) return;
+    active = name;
+    layer.querySelectorAll('.county, .pin').forEach(el => el.classList.toggle('active', el.dataset.n === name));
+    svg.classList.add('zoomed'); zoom(r);
+    const items = r.trip.items;
+    $('#mapIntro').classList.add('hidden'); $('#mapDetail').classList.remove('hidden');
+    $('#mapTitle').textContent = r.trip.label;
+    $('#mapCount').textContent = `${items.length} 則貼文／影片`;
+    const loop = items.length >= 3;  // 3 則以上才自動循環
+    const copies = loop ? Math.max(2, Math.ceil(innerWidth / (items.length * 272)) + 1) : 1;
+    $('#mapTrack').innerHTML = Array.from({ length: copies }, () => items.map(travelCard).join('')).join('');
+    mapMarquee.set(copies, loop);
+    if (matchMedia('(max-width: 1023px)').matches) setTimeout(() => $('#mapPanel').scrollIntoView({ behavior: 'smooth' }), 700);
+  }
+  function reset() {
+    active = null;
+    layer.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+    svg.classList.remove('zoomed'); zoom(null);
+    $('#mapDetail').classList.add('hidden'); $('#mapIntro').classList.remove('hidden');
+  }
+  svg.addEventListener('click', e => {
+    const p = e.target.closest('.county.visited');
+    if (p) { if (p.dataset.n !== active) select(p.dataset.n); }
+    else if (active) reset();
+  });
+  $('#mapChips').addEventListener('click', e => { const b = e.target.closest('[data-c]'); if (b) select(b.dataset.c); });
+  $('#mapBack').addEventListener('click', reset);
+})();
 
 // 商品
 $('#shopGrid').innerHTML = PRODUCTS.map(p => {
