@@ -152,7 +152,7 @@
         </div>
         <div id="mapTabs" class="flex flex-wrap gap-2 mb-4"></div>
         <div class="marquee"><div id="mapTrack" class="track"></div></div>
-        <p class="text-xs text-ink/50 mt-4">可左右滑動或拖曳，點擊卡片即前往原本的 Instagram 貼文或 YouTube 影片。</p>
+        <p class="text-xs text-ink/50 mt-4">可左右滑動或拖曳，點擊卡片即前往原本的 Instagram 貼文、Reels 或 YouTube 影片。</p>
       </div>
     </div>
   </div>
@@ -231,7 +231,8 @@ const PRODUCTS = [
 // 足跡地圖：每個縣市放你在當地發布的貼文／影片（有放資料的縣市會自動變綠並標記）
 // 縣市名稱請用全名，例如 '花蓮縣'、'臺中市'（「台」「臺」皆可）
 // 貼文（Instagram）：type:'post'，url 填單篇貼文網址，img 填封面圖（放在 repo 的照片路徑，沒有就留空）
-// 影片（YouTube）：type:'video'，id 填影片 ID。地圖上會自動分成「貼文」「影片」兩個分頁
+// Reels：type:'reel'，欄位和貼文相同。影片（YouTube 長影片）：type:'video'，id 填影片 ID
+// 地圖上會自動分成「Instagram 貼文」「Instagram Reels」「YouTube 影片」三個分頁
 const ig = (place, title, url, img) => ({ type: 'post', place, title, url, img });  // 貼文簡寫
 const vid = (i, place) => ({ type: 'video', id: VIDEOS[i].id, title: VIDEOS[i].title, place });  // 直接沿用上方 VIDEOS 的資料
 const TRAVELS = {
@@ -382,7 +383,7 @@ const travelCard = it => {
     : `<div class="w-full h-full bg-gradient-to-br from-forest to-moss flex items-center justify-center text-white/80 text-sm">Instagram</div>`;
   return `<a href="${href}" target="_blank" rel="noopener" draggable="false" class="shrink-0 w-64 sm:w-72 block rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition">
     <div class="relative aspect-video bg-forest/10">${thumb}
-      <span class="absolute left-3 top-3 text-xs px-2 py-0.5 rounded-full bg-black/55 text-white">${isVideo ? '▶ YouTube' : 'Instagram'}</span>
+      <span class="absolute left-3 top-3 text-xs px-2 py-0.5 rounded-full bg-black/55 text-white">${isVideo ? '▶ YouTube' : it.type === 'reel' ? '▶ Reels' : 'Instagram'}</span>
     </div>
     <div class="p-4"><p class="text-xs text-moss">${it.place || ''}</p><h4 class="font-medium text-forest text-sm mt-1 line-clamp-2">${it.title}</h4></div>
   </a>`;
@@ -436,7 +437,7 @@ const travelCard = it => {
   let sets = {};
   function showTab(t) {  // 切換「貼文／影片」分頁
     const items = sets[t] || [];
-    $('#mapTabs').innerHTML = [['post', 'Instagram 貼文'], ['video', 'YouTube 影片']]
+    $('#mapTabs').innerHTML = [['post', 'Instagram 貼文'], ['reel', 'Instagram Reels'], ['video', 'YouTube 影片']]
       .filter(([k]) => sets[k].length)
       .map(([k, label]) => `<button data-t="${k}" class="px-4 py-1.5 rounded-full text-sm transition ${k === t ? 'bg-forest text-white' : 'bg-forest/10 text-forest hover:bg-forest/20'}">${label} <span class="opacity-70">${sets[k].length}</span></button>`).join('');
     const loop = items.length >= 3;  // 3 則以上才自動循環
@@ -451,12 +452,12 @@ const travelCard = it => {
     layer.querySelectorAll('.county, .pin').forEach(el => el.classList.toggle('active', el.dataset.n === name));
     svg.classList.add('zoomed'); zoom(r);
     const items = r.trip.items;
-    const posts = items.filter(x => x.type === 'post'), vids = items.filter(x => x.type === 'video');
+    const posts = items.filter(x => x.type === 'post'), reels = items.filter(x => x.type === 'reel'), vids = items.filter(x => x.type === 'video');
     $('#mapIntro').classList.add('hidden'); $('#mapDetail').classList.remove('hidden');
     $('#mapTitle').textContent = r.trip.label;
-    $('#mapCount').textContent = `${posts.length} 則貼文・${vids.length} 支影片`;
-    sets = { post: posts, video: vids };
-    showTab(posts.length ? 'post' : 'video');
+    $('#mapCount').textContent = `${posts.length} 則貼文・${reels.length} 支 Reels・${vids.length} 支影片`;
+    sets = { post: posts, reel: reels, video: vids };
+    showTab(posts.length ? 'post' : reels.length ? 'reel' : 'video');
     if (matchMedia('(max-width: 1023px)').matches) setTimeout(() => $('#mapPanel').scrollIntoView({ behavior: 'smooth' }), 700);
   }
   function reset() {
