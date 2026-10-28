@@ -5,11 +5,12 @@
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
+const INCLUDE_REELS = true;                        // 是否收一般 Instagram Reels（true＝收，會獨立成一個分頁）
 const CHANNEL_ID = 'UCm5DmxNXdwovJmy_e1kxm3A';   // 你的 YouTube 頻道 ID
 const { YT_API_KEY, IG_TOKEN } = process.env;
 const readJSON = (f, fallback) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return fallback; } };
 const PLACES = readJSON('places.json', {});         // 地點關鍵字 → 縣市（可自行編輯）
-const OVERRIDES = readJSON('overrides.json', {});   // 個別修正：{ "貼文網址或影片ID": ["花蓮縣"] }（可不建立）
+const OVERRIDES = readJSON('overrides.json', {});   // 個別修正：{ "貼文網址或影片ID": ["花蓮縣"] }；設成 [] 代表不顯示（可不建立這個檔案）
 
 // ---------- 地點 → 縣市 ----------
 // 1) 說明文字裡直接出現縣市名（台／臺皆可）
@@ -26,7 +27,9 @@ export function classify(text) {
   const t = norm(text), set = new Set();
   let place = '';
   for (const [c, re] of Object.entries(COUNTY_RE)) if (re.test(t)) set.add(c);                       // 縣市名
-  for (const [p, cs] of Object.entries(PLACES)) if (!p.startsWith('_') && t.includes(p)) { cs.forEach(c => set.add(c)); place ||= p; }   // 景點／山名
+  // 景點／山名：若同時符合「萬里長城」和「萬里」，只採用較長的那個，避免誤判
+  const hit = Object.keys(PLACES).filter(p => !p.startsWith('_') && t.includes(p));
+  for (const p of hit.filter(p => !hit.some(q => q !== p && q.includes(p)))) { PLACES[p].forEach(c => set.add(c)); place ||= p; }
   for (const [n, c] of Object.entries(TOWNS)) if (t.includes(n)) { set.add(c); place ||= n; }         // 鄉鎮名
   return { counties: [...set], place };
 }
@@ -106,11 +109,12 @@ async function igPosts() {
       const cap = m.caption || '';
       const title = (cap.split('\n').find(l => l.trim()) || 'Instagram').trim().slice(0, 40);
       const isReel = /\/reel\//.test(m.permalink || '');   // Reels 的網址是 /reel/，一般貼文是 /p/
+      if (isReel && !INCLUDE_REELS) continue;
       out.push({ type: isReel ? 'reel' : 'post', title, text: cap, url: m.permalink, img, date: m.timestamp });
     }
     url = j.paging?.next;
   }
-  console.log(`Instagram：${out.filter(x => x.type === 'post').length} 則貼文、${out.filter(x => x.type === 'reel').length} 支 Reels`);
+  console.log(`Instagram：${out.filter(x => x.type === 'post').length} 則貼文` + (INCLUDE_REELS ? `、${out.filter(x => x.type === 'reel').length} 支 Reels` : '（已略過 Reels）'));
   return out;
 }
 
