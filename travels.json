@@ -1,13 +1,460 @@
 {
- "updated": "2026-10-28T20:54:31.720Z",
+ "updated": "2026-10-29T16:05:41.069Z",
  "counties": {
-  "南投縣": [
+  "雲林縣": [
    {
     "type": "video",
     "id": "a3uWHLcntn4",
     "title": "帶父追日！一日200多公里從花蓮日出騎到雲林日落，重返中橫公路與太魯閣峽谷！｜中橫公路全紀錄【下集】｜【賴同學 Student Lai】",
     "date": "2026-10-25T10:30:10Z",
+    "place": "太魯閣"
+   },
+   {
+    "type": "video",
+    "id": "B9Pz3_E7Fmo",
+    "title": "挑戰一天內從雲林騎車到花蓮橫貫台灣！翻越3275M中央山脈直奔太魯閣，走過最壯麗的東西橫貫公路！｜中橫公路全紀錄【上集】｜【賴同學 Student Lai】",
+    "date": "2026-10-10T10:30:32Z",
+    "place": "太魯閣"
+   },
+   {
+    "type": "reel",
+    "title": "你認為台灣最美的風景是什麼呢？🇹🇼",
+    "url": "https://www.instagram.com/reel/Dd_NVECJ4Ni/",
+    "img": "ig/18120419281734386.jpg",
+    "date": "2026-10-02T09:55:35+0000",
     "place": "合歡"
+   },
+   {
+    "type": "reel",
+    "title": "雲林除了農田外還有美麗的山林。🌲 #雲林 #攝影 #台灣 #taiwan #旅",
+    "url": "https://www.instagram.com/reel/DdvtYzAJdYG/",
+    "img": "ig/18392853178163886.jpg",
+    "date": "2026-09-26T09:28:47+0000",
+    "place": "雲林縣"
+   },
+   {
+    "type": "video",
+    "id": "_NgeQrZdmU8",
+    "title": "雲林的瀑布竟有恐龍和駱駝鎮守！？深入草嶺第一景，意外揭開懸崖上20年前的廢棄纜車之謎！｜雲林古坑 蓬萊瀑布｜【賴同學 Student Lai】",
+    "date": "2026-09-24T10:30:08Z",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "台灣一座有「恐龍」鎮守的瀑布！🦖",
+    "url": "https://www.instagram.com/reel/DdQxNmspDho/",
+    "img": "ig/18108829526604125.jpg",
+    "date": "2026-09-14T09:07:22+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "雲林竟然有侏羅紀世界的場景！🦖 #雲林 #旅行 #景點 #瀑布 #台灣",
+    "url": "https://www.instagram.com/reel/DdLup48phVW/",
+    "img": "ig/18115579081801621.jpg",
+    "date": "2026-09-12T10:05:45+0000",
+    "place": "雲林縣"
+   },
+   {
+    "type": "reel",
+    "title": "在雲林古坑樟湖罰站50分鐘拍下的震撼畫面。#黃頭鷺 #鳥 #攝影 #旅行 #台灣",
+    "url": "https://www.instagram.com/reel/DdEG82qpOvm/",
+    "img": "ig/18071598932544198.jpg",
+    "date": "2026-09-09T11:05:10+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "Yunlin Daily, Taiwan. 🌾 #daily #photogr",
+    "url": "https://www.instagram.com/reel/Dc5tiDipTXs/",
+    "img": "ig/18333632608276029.jpg",
+    "date": "2026-09-05T10:12:55+0000",
+    "place": "雲林縣"
+   },
+   {
+    "type": "post",
+    "title": "山的光影／Mountain's Light and Shadow",
+    "url": "https://www.instagram.com/p/Db7e7tVCQ4u/",
+    "img": "ig/18018948950880635.jpg",
+    "date": "2026-08-12T06:07:49+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "video",
+    "id": "jvGGSEpIHYc",
+    "title": "雲林竟然有一座「世界級竹林」？ 走進石壁森林療育園區，感受這片美到讓人忘記呼吸的竹林！｜雲林古坑 石壁森林療育園區｜【賴同學 Student Lai】",
+    "date": "2026-08-03T10:30:31Z",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "我在雲林發現了一片美麗的竹林。#竹林 #景點 #雲林 #旅行 #台灣",
+    "url": "https://www.instagram.com/reel/Dbksq5upWWO/",
+    "img": "ig/18097584308011709.jpg",
+    "date": "2026-08-03T09:49:35+0000",
+    "place": "雲林縣"
+   },
+   {
+    "type": "reel",
+    "title": "Is this the bamboo forest you imagined? ",
+    "url": "https://www.instagram.com/reel/Dbkos7CpTHW/",
+    "img": "ig/18128733049657051.jpg",
+    "date": "2026-08-03T09:12:37+0000",
+    "place": "雲林縣"
+   },
+   {
+    "type": "reel",
+    "title": "陽光是大自然最好的補光燈。✨",
+    "url": "https://www.instagram.com/reel/DaU2sq2pPsL/",
+    "img": "ig/17865511773593736.jpg",
+    "date": "2026-07-03T09:45:43+0000",
+    "place": "木馬古道"
+   },
+   {
+    "type": "post",
+    "title": "綠竹／Green Bamboo",
+    "url": "https://www.instagram.com/p/DaC3on_iSnh/",
+    "img": "ig/18191994016374431.jpg",
+    "date": "2026-06-26T09:55:34+0000",
+    "place": "木馬古道"
+   },
+   {
+    "type": "reel",
+    "title": "那天，我在雲林遇見了雲和光。☁️✨",
+    "url": "https://www.instagram.com/reel/DZhrkxXJun7/",
+    "img": "ig/18140188354540287.jpg",
+    "date": "2026-06-13T12:36:49+0000",
+    "place": "雲林縣"
+   },
+   {
+    "type": "video",
+    "id": "KgjmiPO1qp8",
+    "title": "來去看2026的第一片海：雲林到屏東騎行全紀錄！半路竟然還爆胎了！？｜雲林 to 屏東｜【賴同學 Student Lai】",
+    "date": "2026-04-28T09:03:27Z",
+    "place": "雲林縣"
+   },
+   {
+    "type": "reel",
+    "title": "帶著爸媽來去挑戰雲林最高峰！嘉南雲峰⛰️",
+    "url": "https://www.instagram.com/reel/DXTu6x4Cayj/",
+    "img": "ig/18103194394758211.jpg",
+    "date": "2026-04-19T09:34:33+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "要如何在雲霧繚繞的森林裡拍下好看的照片？",
+    "url": "https://www.instagram.com/reel/DWdmtOhicqm/",
+    "img": "ig/17945777208140322.jpg",
+    "date": "2026-03-29T09:03:33+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "post",
+    "title": "檳榔樹／Betel Nut Tree",
+    "url": "https://www.instagram.com/p/DWbfuxWCX9-/",
+    "img": "ig/17921058471293361.jpg",
+    "date": "2026-03-28T13:22:08+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "post",
+    "title": "魔幻森林／Magic Forest",
+    "url": "https://www.instagram.com/p/DWOh_jfifpl/",
+    "img": "ig/17876990262544038.jpg",
+    "date": "2026-03-23T12:31:46+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "當你跑去拍櫻花，結果是個大陰天，但你還是努力拍下了照片。",
+    "url": "https://www.instagram.com/reel/DV98XlQCWOl/",
+    "img": "ig/17996027039878443.jpg",
+    "date": "2026-03-17T01:56:00+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "在山裡找到一個屬於自己的位置。",
+    "url": "https://www.instagram.com/reel/DV0dyooCQK_/",
+    "img": "ig/17888501412443377.jpg",
+    "date": "2026-03-13T09:47:46+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "有事沒事，山裡走走。",
+    "url": "https://www.instagram.com/reel/DVyAubjgZAu/",
+    "img": "ig/18125373145570814.jpg",
+    "date": "2026-03-12T10:44:15+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "隨著前人的足跡，走進了這被綠意環繞的步道。",
+    "url": "https://www.instagram.com/reel/DVvXMnFgSuw/",
+    "img": "ig/17908526139358881.jpg",
+    "date": "2026-03-11T10:02:21+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "video",
+    "id": "K-1CDJfNUL0",
+    "title": "登上雲林縣境內最高峰！嘉南雲峰 x 石壁山連走：挑戰不容小覷的陡坡，下山後去看超美麗的櫻花！｜雲林古坑 石壁｜【賴同學 Student Lai】",
+    "date": "2026-03-09T04:00:18Z",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "位在雲林峭壁懸崖旁的震撼山景。",
+    "url": "https://www.instagram.com/reel/DVnovnGgW3A/",
+    "img": "ig/17941392135176263.jpg",
+    "date": "2026-03-08T10:01:16+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "post",
+    "title": "與森林相遇／Encounter with the Forest",
+    "url": "https://www.instagram.com/p/DVmmlRvkgyh/",
+    "img": "ig/18569572336038909.jpg",
+    "date": "2026-03-08T00:22:15+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "post",
+    "title": "微光／Dim Light",
+    "url": "https://www.instagram.com/p/DVf0xJ7CZQ5/",
+    "img": "ig/18042810869744030.jpg",
+    "date": "2026-03-05T09:11:33+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "post",
+    "title": "櫻之山／Sakura Mountain",
+    "url": "https://www.instagram.com/p/DVVw661iVcj/",
+    "img": "ig/17877982191394710.jpg",
+    "date": "2026-03-01T11:25:30+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "長途跋涉的理由，也許只是一片讓人記住一輩子的風景。",
+    "url": "https://www.instagram.com/reel/DUaW0UUAX81/",
+    "img": "ig/17986452875947446.jpg",
+    "date": "2026-02-06T09:43:23+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "post",
+    "title": "風起雲湧／The wind rises and the clouds surge",
+    "url": "https://www.instagram.com/p/DUVYBF-Cd7c/",
+    "img": "ig/17845705896682796.jpg",
+    "date": "2026-02-04T11:16:30+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "看見了這片風景，於是我停下了車。",
+    "url": "https://www.instagram.com/reel/DUNjOXJiUe9/",
+    "img": "ig/17945645562099880.jpg",
+    "date": "2026-02-01T10:24:06+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "漫步在五元兩角的竹製長廊，感受著孟宗竹林的綠意與生機。",
+    "url": "https://www.instagram.com/reel/DUMm1CRj5b0/",
+    "img": "ig/18071238224576158.jpg",
+    "date": "2026-02-01T01:33:48+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "我想我找到了那片最美的雲海。",
+    "url": "https://www.instagram.com/reel/DUITf-WiRzo/",
+    "img": "ig/18107706496665426.jpg",
+    "date": "2026-01-30T09:29:22+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "reel",
+    "title": "那一天冒著風雨上山遇見的壯觀雲海。",
+    "url": "https://www.instagram.com/reel/DUFtWkWgZ-j/",
+    "img": "ig/18374824705082600.jpg",
+    "date": "2026-01-29T09:19:06+0000",
+    "place": "古坑"
+   },
+   {
+    "type": "video",
+    "id": "uAd_AqC3UFM",
+    "title": "從雲林沿著山稜徒步走進嘉義！一條茶園、竹林和雲海交錯的山脈縱走路線！沿途的美景真的會讓你捨不得離開啊！ ｜雲林古坑 & 嘉義梅山 雲嘉五連峰｜【賴同學 Student Lai】",
+    "date": "2026-01-03T12:01:57Z",
+    "place": "古坑"
+   },
+   {
+    "type": "video",
+    "id": "Xv0omVCdKUs",
+    "title": "騎車橫跨數座大山來去追尋黃頭鷺的蹤影！沒想到竟然撲了個空！？｜後棟山、碧湖山茶園、太平老街、太興村 & 樟湖｜【賴同學 Student Lai】",
+    "date": "2025-09-28T12:01:04Z",
+    "place": "雲林縣"
+   },
+   {
+    "type": "video",
+    "id": "bdhwlN5lZ0Y",
+    "title": "炎熱的天氣跑到華山去走步道~ 意外發現展望超好的祕境！竟然遇到有人倒在地上！？｜華山11號步道｜【賴同學 Student Lai】",
+    "date": "2025-08-30T10:01:04Z",
+    "place": "古坑"
+   },
+   {
+    "type": "video",
+    "id": "kk9LXW-Sjpk",
+    "title": "遇到道路封閉怎麼辦？那就調轉車頭，不看地圖來一場山間遨遊的冒險！｜清水溪橋、龍眼村龍興宮、碧湖山茶園 & 太平36彎｜【不看Google地圖去旅行 ep.2】【賴同學 Student Lai】",
+    "date": "2025-08-24T10:01:13Z",
+    "place": "太平雲梯"
+   },
+   {
+    "type": "video",
+    "id": "icRIclNv430",
+    "title": "颱風過後再次騎車上山，山變得如何了？滿地都是泥土和落石！？｜雲林古坑 & 南投桶頭｜獨旅系列 ep. 17【賴同學 Student Lai】",
+    "date": "2025-07-26T10:01:09Z",
+    "place": "古坑"
+   },
+   {
+    "type": "video",
+    "id": "JvMjF50J7gA",
+    "title": "不看Google地圖成功抵達了白水湖壽島！？｜不看Google地圖去旅行：出發去看海 ep.1（下）【CC字幕】【賴同學 Student Lai】",
+    "date": "2025-07-08T10:00:36Z",
+    "place": "雲林縣"
+   }
+  ],
+  "花蓮縣": [
+   {
+    "type": "video",
+    "id": "a3uWHLcntn4",
+    "title": "帶父追日！一日200多公里從花蓮日出騎到雲林日落，重返中橫公路與太魯閣峽谷！｜中橫公路全紀錄【下集】｜【賴同學 Student Lai】",
+    "date": "2026-10-25T10:30:10Z",
+    "place": "太魯閣"
+   },
+   {
+    "type": "reel",
+    "title": "當我帶著相機來到花蓮早上的海邊。📷 #花蓮 #日出 #大海 #攝影 #taiw",
+    "url": "https://www.instagram.com/reel/DerUxJ5pNgK/",
+    "img": "ig/18105520688363951.jpg",
+    "date": "2026-10-19T13:06:51+0000",
+    "place": "花蓮縣"
+   },
+   {
+    "type": "reel",
+    "title": "Shot on Hunlien morning. 📷 #ocean #sea ",
+    "url": "https://www.instagram.com/reel/DerKiBmptB0/",
+    "img": "ig/18153355102557404.jpg",
+    "date": "2026-10-19T11:42:38+0000",
+    "place": "花蓮縣"
+   },
+   {
+    "type": "reel",
+    "title": "Sunrise in Hualien. 🌅 #sunrise #sea #vi",
+    "url": "https://www.instagram.com/reel/DeohZ0epZnr/",
+    "img": "ig/17975452842129146.jpg",
+    "date": "2026-10-18T11:00:25+0000",
+    "place": "花蓮縣"
+   },
+   {
+    "type": "reel",
+    "title": "當我出現在了花蓮早上五點半的海邊。🌊 #七星潭 #日出 #大海 #旅行 #ta",
+    "url": "https://www.instagram.com/reel/Deoe4fYJmW2/",
+    "img": "ig/17999784876008221.jpg",
+    "date": "2026-10-18T10:41:03+0000",
+    "place": "七星潭"
+   },
+   {
+    "type": "reel",
+    "title": "There is a sea outside my window.🌊💙 #o",
+    "url": "https://www.instagram.com/reel/DeZFyhdpZGQ/",
+    "img": "ig/18369689917208356.jpg",
+    "date": "2026-10-12T11:09:49+0000",
+    "place": "花蓮縣"
+   },
+   {
+    "type": "reel",
+    "title": "我的窗外有片幸福的藍色大海。🌊💙 #花蓮 #七星潭 #旅行 #台灣 #民宿",
+    "url": "https://www.instagram.com/reel/DeY4HJSJnwz/",
+    "img": "ig/18005481254791666.jpg",
+    "date": "2026-10-12T09:10:53+0000",
+    "place": "七星潭"
+   },
+   {
+    "type": "video",
+    "id": "B9Pz3_E7Fmo",
+    "title": "挑戰一天內從雲林騎車到花蓮橫貫台灣！翻越3275M中央山脈直奔太魯閣，走過最壯麗的東西橫貫公路！｜中橫公路全紀錄【上集】｜【賴同學 Student Lai】",
+    "date": "2026-10-10T10:30:32Z",
+    "place": "太魯閣"
+   },
+   {
+    "type": "reel",
+    "title": "你認為台灣最美的風景是什麼呢？🇹🇼",
+    "url": "https://www.instagram.com/reel/Dd_NVECJ4Ni/",
+    "img": "ig/18120419281734386.jpg",
+    "date": "2026-10-02T09:55:35+0000",
+    "place": "合歡"
+   },
+   {
+    "type": "reel",
+    "title": "The sea of Hualien. 🩵💙🌊 #ocean #blue ",
+    "url": "https://www.instagram.com/reel/Dd4GcKlJ6CB/",
+    "img": "ig/18074140307469358.jpg",
+    "date": "2026-09-29T15:40:38+0000",
+    "place": "花蓮縣"
+   },
+   {
+    "type": "reel",
+    "title": "花蓮的海。🩵💙🌊 #花蓮 #東部 #海 #旅行 #台灣",
+    "url": "https://www.instagram.com/reel/Dd2uM5hQESv/",
+    "img": "ig/17952915045035652.jpg",
+    "date": "2026-09-29T03:01:48+0000",
+    "place": "花蓮縣"
+   },
+   {
+    "type": "post",
+    "title": "日出之前／Before Sunrise",
+    "url": "https://www.instagram.com/p/Ddyp34BCZkc/",
+    "img": "ig/17940728817358164.jpg",
+    "date": "2026-09-27T12:53:03+0000",
+    "place": "七星潭"
+   },
+   {
+    "type": "reel",
+    "title": "Taroko in Taiwan.⛰️ #motorcycle #travel ",
+    "url": "https://www.instagram.com/reel/DdtpyVFp5vl/",
+    "img": "ig/17984868876117395.jpg",
+    "date": "2026-09-25T14:18:28+0000",
+    "place": "太魯閣"
+   },
+   {
+    "type": "reel",
+    "title": "大自然在花蓮太魯閣留下的深刻印記。⛰️",
+    "url": "https://www.instagram.com/reel/DdrBa4CpdE0/",
+    "img": "ig/17933119221398861.jpg",
+    "date": "2026-09-24T13:50:06+0000",
+    "place": "太魯閣"
+   },
+   {
+    "type": "post",
+    "title": "黑色奇萊／The Dark Qilai",
+    "url": "https://www.instagram.com/p/DbsY8ASCd5c/",
+    "img": "ig/18187323961393346.jpg",
+    "date": "2026-08-06T09:26:50+0000",
+    "place": "合歡"
+   }
+  ],
+  "南投縣": [
+   {
+    "type": "reel",
+    "title": "用鏡頭紀錄下了八通關古道的山林痕跡。🌿 #南投 #東埔 #攝影 #登山 #ta",
+    "url": "https://www.instagram.com/reel/DfEr0_Hpth5/",
+    "img": "ig/18099424190556904.jpg",
+    "date": "2026-10-29T09:34:32+0000",
+    "place": "東埔"
    },
    {
     "type": "post",
@@ -47,13 +494,6 @@
     "url": "https://www.instagram.com/reel/DeeTFompBkp/",
     "img": "ig/18074545577735438.jpg",
     "date": "2026-10-14T11:43:35+0000",
-    "place": "合歡"
-   },
-   {
-    "type": "video",
-    "id": "B9Pz3_E7Fmo",
-    "title": "挑戰一天內從雲林騎車到花蓮橫貫台灣！翻越3275M中央山脈直奔太魯閣，走過最壯麗的東西橫貫公路！｜中橫公路全紀錄【上集】｜【賴同學 Student Lai】",
-    "date": "2026-10-10T10:30:32Z",
     "place": "合歡"
    },
    {
@@ -203,7 +643,7 @@
     "id": "MKeLMeOFiyU",
     "title": "父子200公里熱血長征！竟然在阿里山看見絕美的夕陽雲海！騎進新中橫公路，意外解鎖「救鑰匙」技能！？｜南投信義 & 嘉義阿里山｜【賴同學 Student Lai】",
     "date": "2026-08-18T10:30:20Z",
-    "place": "玉山"
+    "place": "阿里山"
    },
    {
     "type": "post",
@@ -234,7 +674,7 @@
     "id": "qM-pEiam3uQ",
     "title": "塔塔加必走的絕美路線：塔塔加三連峰全紀錄！感受步道上百岳美景的震撼！｜南投信義 塔塔加｜【賴同學 Student Lai】",
     "date": "2026-08-11T10:30:16Z",
-    "place": "玉山"
+    "place": "塔塔加"
    },
    {
     "type": "reel",
@@ -830,14 +1270,14 @@
     "id": "p4uQdGwlmGE",
     "title": "走進台灣百年歷史的古道「八通關古道」！建立在懸崖峭壁旁既危險又美麗的登山路線！【伐木累出遊 DAY3】｜ 八通關古道 雲龍瀑布｜【賴同學 Student Lai】",
     "date": "2025-11-29T12:01:39Z",
-    "place": "玉山"
+    "place": "塔塔加"
    },
    {
     "type": "video",
     "id": "yhytMFAjDHM",
     "title": "都騎車來到了阿里山怎麼能不去看日出呢！塔塔加的森林步道真的超美！【伐木累出遊 DAY2】｜嘉義阿里山 & 南投信義｜【賴同學 Student Lai】",
     "date": "2025-11-22T12:01:56Z",
-    "place": "玉山"
+    "place": "塔塔加"
    },
    {
     "type": "video",
@@ -865,14 +1305,14 @@
     "id": "7aSBB-st_uM",
     "title": "【台灣最高公路】 第一人稱感受早上南投台14甲的景色！｜沉靜式騎車：台14甲｜KYMCO Krv180 & DJI Action 5Pro｜騎行純享 ep.11【賴同學 Student Lai】",
     "date": "2025-07-30T10:00:11Z",
-    "place": "武嶺"
+    "place": "南投縣"
    },
    {
     "type": "video",
     "id": "icRIclNv430",
     "title": "颱風過後再次騎車上山，山變得如何了？滿地都是泥土和落石！？｜雲林古坑 & 南投桶頭｜獨旅系列 ep. 17【賴同學 Student Lai】",
     "date": "2025-07-26T10:01:09Z",
-    "place": "合歡"
+    "place": "古坑"
    },
    {
     "type": "video",
@@ -886,7 +1326,7 @@
     "id": "-k1LMgz17h4",
     "title": "【傍晚台14甲】 第一人稱感受傍晚南投台14甲的風景｜沉靜式騎車：台14甲｜KYMCO Krv180 & DJI Action 5Pro｜騎行純享 ep.9【賴同學 Student Lai】",
     "date": "2025-07-22T10:00:01Z",
-    "place": "清境"
+    "place": "南投縣"
    },
    {
     "type": "video",
@@ -900,482 +1340,21 @@
     "id": "6SQmJSeqlRw",
     "title": "【南投台14線】 第一人稱感受南投台14線的風景｜沉靜式騎車：台14線｜KYMCO Krv180 & DJI Action 5Pro｜騎行純享 ep.8【賴同學 Student Lai】",
     "date": "2025-07-16T12:00:13Z",
-    "place": "埔里"
+    "place": "南投縣"
    },
    {
     "type": "video",
     "id": "uob7dN_7mik",
     "title": "【南投131線道】 第一人稱感受南投縣道131的風景｜沉靜式騎車：縣道131｜KYMCO Krv180 & DJI Action 5Pro｜騎行純享 ep.7【賴同學 Student Lai】",
     "date": "2025-07-14T13:17:50Z",
-    "place": "埔里"
+    "place": "南投縣"
    },
    {
     "type": "video",
     "id": "ep7u45xAHDc",
     "title": "去清境只要花50塊就可以看綿羊！？CP值超高？民宿看出去的風景超漂亮！｜清境高空景觀步道 & 眷戀山城｜獨旅系列 ep. 15 【賴同學 Student Lai】",
     "date": "2025-07-13T11:30:26Z",
-    "place": "合歡"
-   }
-  ],
-  "雲林縣": [
-   {
-    "type": "video",
-    "id": "a3uWHLcntn4",
-    "title": "帶父追日！一日200多公里從花蓮日出騎到雲林日落，重返中橫公路與太魯閣峽谷！｜中橫公路全紀錄【下集】｜【賴同學 Student Lai】",
-    "date": "2026-10-25T10:30:10Z",
-    "place": "合歡"
-   },
-   {
-    "type": "video",
-    "id": "B9Pz3_E7Fmo",
-    "title": "挑戰一天內從雲林騎車到花蓮橫貫台灣！翻越3275M中央山脈直奔太魯閣，走過最壯麗的東西橫貫公路！｜中橫公路全紀錄【上集】｜【賴同學 Student Lai】",
-    "date": "2026-10-10T10:30:32Z",
-    "place": "合歡"
-   },
-   {
-    "type": "reel",
-    "title": "你認為台灣最美的風景是什麼呢？🇹🇼",
-    "url": "https://www.instagram.com/reel/Dd_NVECJ4Ni/",
-    "img": "ig/18120419281734386.jpg",
-    "date": "2026-10-02T09:55:35+0000",
-    "place": "合歡"
-   },
-   {
-    "type": "reel",
-    "title": "雲林除了農田外還有美麗的山林。🌲 #雲林 #攝影 #台灣 #taiwan #旅",
-    "url": "https://www.instagram.com/reel/DdvtYzAJdYG/",
-    "img": "ig/18392853178163886.jpg",
-    "date": "2026-09-26T09:28:47+0000",
-    "place": "雲林縣"
-   },
-   {
-    "type": "video",
-    "id": "_NgeQrZdmU8",
-    "title": "雲林的瀑布竟有恐龍和駱駝鎮守！？深入草嶺第一景，意外揭開懸崖上20年前的廢棄纜車之謎！｜雲林古坑 蓬萊瀑布｜【賴同學 Student Lai】",
-    "date": "2026-09-24T10:30:08Z",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "台灣一座有「恐龍」鎮守的瀑布！🦖",
-    "url": "https://www.instagram.com/reel/DdQxNmspDho/",
-    "img": "ig/18108829526604125.jpg",
-    "date": "2026-09-14T09:07:22+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "雲林竟然有侏羅紀世界的場景！🦖 #雲林 #旅行 #景點 #瀑布 #台灣",
-    "url": "https://www.instagram.com/reel/DdLup48phVW/",
-    "img": "ig/18115579081801621.jpg",
-    "date": "2026-09-12T10:05:45+0000",
-    "place": "雲林縣"
-   },
-   {
-    "type": "reel",
-    "title": "在雲林古坑樟湖罰站50分鐘拍下的震撼畫面。#黃頭鷺 #鳥 #攝影 #旅行 #台灣",
-    "url": "https://www.instagram.com/reel/DdEG82qpOvm/",
-    "img": "ig/18071598932544198.jpg",
-    "date": "2026-09-09T11:05:10+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "Yunlin Daily, Taiwan. 🌾 #daily #photogr",
-    "url": "https://www.instagram.com/reel/Dc5tiDipTXs/",
-    "img": "ig/18333632608276029.jpg",
-    "date": "2026-09-05T10:12:55+0000",
-    "place": "雲林縣"
-   },
-   {
-    "type": "post",
-    "title": "山的光影／Mountain's Light and Shadow",
-    "url": "https://www.instagram.com/p/Db7e7tVCQ4u/",
-    "img": "ig/18018948950880635.jpg",
-    "date": "2026-08-12T06:07:49+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "video",
-    "id": "jvGGSEpIHYc",
-    "title": "雲林竟然有一座「世界級竹林」？ 走進石壁森林療育園區，感受這片美到讓人忘記呼吸的竹林！｜雲林古坑 石壁森林療育園區｜【賴同學 Student Lai】",
-    "date": "2026-08-03T10:30:31Z",
-    "place": "木馬古道"
-   },
-   {
-    "type": "reel",
-    "title": "我在雲林發現了一片美麗的竹林。#竹林 #景點 #雲林 #旅行 #台灣",
-    "url": "https://www.instagram.com/reel/Dbksq5upWWO/",
-    "img": "ig/18097584308011709.jpg",
-    "date": "2026-08-03T09:49:35+0000",
-    "place": "雲林縣"
-   },
-   {
-    "type": "reel",
-    "title": "Is this the bamboo forest you imagined? ",
-    "url": "https://www.instagram.com/reel/Dbkos7CpTHW/",
-    "img": "ig/18128733049657051.jpg",
-    "date": "2026-08-03T09:12:37+0000",
-    "place": "雲林縣"
-   },
-   {
-    "type": "reel",
-    "title": "陽光是大自然最好的補光燈。✨",
-    "url": "https://www.instagram.com/reel/DaU2sq2pPsL/",
-    "img": "ig/17865511773593736.jpg",
-    "date": "2026-07-03T09:45:43+0000",
-    "place": "木馬古道"
-   },
-   {
-    "type": "post",
-    "title": "綠竹／Green Bamboo",
-    "url": "https://www.instagram.com/p/DaC3on_iSnh/",
-    "img": "ig/18191994016374431.jpg",
-    "date": "2026-06-26T09:55:34+0000",
-    "place": "木馬古道"
-   },
-   {
-    "type": "reel",
-    "title": "那天，我在雲林遇見了雲和光。☁️✨",
-    "url": "https://www.instagram.com/reel/DZhrkxXJun7/",
-    "img": "ig/18140188354540287.jpg",
-    "date": "2026-06-13T12:36:49+0000",
-    "place": "雲林縣"
-   },
-   {
-    "type": "video",
-    "id": "KgjmiPO1qp8",
-    "title": "來去看2026的第一片海：雲林到屏東騎行全紀錄！半路竟然還爆胎了！？｜雲林 to 屏東｜【賴同學 Student Lai】",
-    "date": "2026-04-28T09:03:27Z",
-    "place": "墾丁"
-   },
-   {
-    "type": "reel",
-    "title": "帶著爸媽來去挑戰雲林最高峰！嘉南雲峰⛰️",
-    "url": "https://www.instagram.com/reel/DXTu6x4Cayj/",
-    "img": "ig/18103194394758211.jpg",
-    "date": "2026-04-19T09:34:33+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "要如何在雲霧繚繞的森林裡拍下好看的照片？",
-    "url": "https://www.instagram.com/reel/DWdmtOhicqm/",
-    "img": "ig/17945777208140322.jpg",
-    "date": "2026-03-29T09:03:33+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "post",
-    "title": "檳榔樹／Betel Nut Tree",
-    "url": "https://www.instagram.com/p/DWbfuxWCX9-/",
-    "img": "ig/17921058471293361.jpg",
-    "date": "2026-03-28T13:22:08+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "post",
-    "title": "魔幻森林／Magic Forest",
-    "url": "https://www.instagram.com/p/DWOh_jfifpl/",
-    "img": "ig/17876990262544038.jpg",
-    "date": "2026-03-23T12:31:46+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "當你跑去拍櫻花，結果是個大陰天，但你還是努力拍下了照片。",
-    "url": "https://www.instagram.com/reel/DV98XlQCWOl/",
-    "img": "ig/17996027039878443.jpg",
-    "date": "2026-03-17T01:56:00+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "在山裡找到一個屬於自己的位置。",
-    "url": "https://www.instagram.com/reel/DV0dyooCQK_/",
-    "img": "ig/17888501412443377.jpg",
-    "date": "2026-03-13T09:47:46+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "有事沒事，山裡走走。",
-    "url": "https://www.instagram.com/reel/DVyAubjgZAu/",
-    "img": "ig/18125373145570814.jpg",
-    "date": "2026-03-12T10:44:15+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "隨著前人的足跡，走進了這被綠意環繞的步道。",
-    "url": "https://www.instagram.com/reel/DVvXMnFgSuw/",
-    "img": "ig/17908526139358881.jpg",
-    "date": "2026-03-11T10:02:21+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "video",
-    "id": "K-1CDJfNUL0",
-    "title": "登上雲林縣境內最高峰！嘉南雲峰 x 石壁山連走：挑戰不容小覷的陡坡，下山後去看超美麗的櫻花！｜雲林古坑 石壁｜【賴同學 Student Lai】",
-    "date": "2026-03-09T04:00:18Z",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "位在雲林峭壁懸崖旁的震撼山景。",
-    "url": "https://www.instagram.com/reel/DVnovnGgW3A/",
-    "img": "ig/17941392135176263.jpg",
-    "date": "2026-03-08T10:01:16+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "post",
-    "title": "與森林相遇／Encounter with the Forest",
-    "url": "https://www.instagram.com/p/DVmmlRvkgyh/",
-    "img": "ig/18569572336038909.jpg",
-    "date": "2026-03-08T00:22:15+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "post",
-    "title": "微光／Dim Light",
-    "url": "https://www.instagram.com/p/DVf0xJ7CZQ5/",
-    "img": "ig/18042810869744030.jpg",
-    "date": "2026-03-05T09:11:33+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "post",
-    "title": "櫻之山／Sakura Mountain",
-    "url": "https://www.instagram.com/p/DVVw661iVcj/",
-    "img": "ig/17877982191394710.jpg",
-    "date": "2026-03-01T11:25:30+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "長途跋涉的理由，也許只是一片讓人記住一輩子的風景。",
-    "url": "https://www.instagram.com/reel/DUaW0UUAX81/",
-    "img": "ig/17986452875947446.jpg",
-    "date": "2026-02-06T09:43:23+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "post",
-    "title": "風起雲湧／The wind rises and the clouds surge",
-    "url": "https://www.instagram.com/p/DUVYBF-Cd7c/",
-    "img": "ig/17845705896682796.jpg",
-    "date": "2026-02-04T11:16:30+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "看見了這片風景，於是我停下了車。",
-    "url": "https://www.instagram.com/reel/DUNjOXJiUe9/",
-    "img": "ig/17945645562099880.jpg",
-    "date": "2026-02-01T10:24:06+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "漫步在五元兩角的竹製長廊，感受著孟宗竹林的綠意與生機。",
-    "url": "https://www.instagram.com/reel/DUMm1CRj5b0/",
-    "img": "ig/18071238224576158.jpg",
-    "date": "2026-02-01T01:33:48+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "我想我找到了那片最美的雲海。",
-    "url": "https://www.instagram.com/reel/DUITf-WiRzo/",
-    "img": "ig/18107706496665426.jpg",
-    "date": "2026-01-30T09:29:22+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "那一天冒著風雨上山遇見的壯觀雲海。",
-    "url": "https://www.instagram.com/reel/DUFtWkWgZ-j/",
-    "img": "ig/18374824705082600.jpg",
-    "date": "2026-01-29T09:19:06+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "來到雲林一處觀賞壯闊山巒和無邊雲海的涼亭。",
-    "url": "https://www.instagram.com/reel/DUDPPWzgYLm/",
-    "img": "ig/18101094412848847.jpg",
-    "date": "2026-01-28T10:15:25+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "video",
-    "id": "uAd_AqC3UFM",
-    "title": "從雲林沿著山稜徒步走進嘉義！一條茶園、竹林和雲海交錯的山脈縱走路線！沿途的美景真的會讓你捨不得離開啊！ ｜雲林古坑 & 嘉義梅山 雲嘉五連峰｜【賴同學 Student Lai】",
-    "date": "2026-01-03T12:01:57Z",
-    "place": "古坑"
-   },
-   {
-    "type": "video",
-    "id": "Xv0omVCdKUs",
-    "title": "騎車橫跨數座大山來去追尋黃頭鷺的蹤影！沒想到竟然撲了個空！？｜後棟山、碧湖山茶園、太平老街、太興村 & 樟湖｜【賴同學 Student Lai】",
-    "date": "2025-09-28T12:01:04Z",
-    "place": "太平雲梯"
-   },
-   {
-    "type": "video",
-    "id": "bdhwlN5lZ0Y",
-    "title": "炎熱的天氣跑到華山去走步道~ 意外發現展望超好的祕境！竟然遇到有人倒在地上！？｜華山11號步道｜【賴同學 Student Lai】",
-    "date": "2025-08-30T10:01:04Z",
-    "place": "古坑"
-   },
-   {
-    "type": "video",
-    "id": "kk9LXW-Sjpk",
-    "title": "遇到道路封閉怎麼辦？那就調轉車頭，不看地圖來一場山間遨遊的冒險！｜清水溪橋、龍眼村龍興宮、碧湖山茶園 & 太平36彎｜【不看Google地圖去旅行 ep.2】【賴同學 Student Lai】",
-    "date": "2025-08-24T10:01:13Z",
-    "place": "太平雲梯"
-   },
-   {
-    "type": "video",
-    "id": "icRIclNv430",
-    "title": "颱風過後再次騎車上山，山變得如何了？滿地都是泥土和落石！？｜雲林古坑 & 南投桶頭｜獨旅系列 ep. 17【賴同學 Student Lai】",
-    "date": "2025-07-26T10:01:09Z",
-    "place": "合歡"
-   },
-   {
-    "type": "video",
-    "id": "JvMjF50J7gA",
-    "title": "不看Google地圖成功抵達了白水湖壽島！？｜不看Google地圖去旅行：出發去看海 ep.1（下）【CC字幕】【賴同學 Student Lai】",
-    "date": "2025-07-08T10:00:36Z",
-    "place": "雲林縣"
-   }
-  ],
-  "花蓮縣": [
-   {
-    "type": "video",
-    "id": "a3uWHLcntn4",
-    "title": "帶父追日！一日200多公里從花蓮日出騎到雲林日落，重返中橫公路與太魯閣峽谷！｜中橫公路全紀錄【下集】｜【賴同學 Student Lai】",
-    "date": "2026-10-25T10:30:10Z",
-    "place": "合歡"
-   },
-   {
-    "type": "reel",
-    "title": "當我帶著相機來到花蓮早上的海邊。📷 #花蓮 #日出 #大海 #攝影 #taiw",
-    "url": "https://www.instagram.com/reel/DerUxJ5pNgK/",
-    "img": "ig/18105520688363951.jpg",
-    "date": "2026-10-19T13:06:51+0000",
-    "place": "花蓮縣"
-   },
-   {
-    "type": "reel",
-    "title": "Shot on Hunlien morning. 📷 #ocean #sea ",
-    "url": "https://www.instagram.com/reel/DerKiBmptB0/",
-    "img": "ig/18153355102557404.jpg",
-    "date": "2026-10-19T11:42:38+0000",
-    "place": "花蓮縣"
-   },
-   {
-    "type": "reel",
-    "title": "Sunrise in Hualien. 🌅 #sunrise #sea #vi",
-    "url": "https://www.instagram.com/reel/DeohZ0epZnr/",
-    "img": "ig/17975452842129146.jpg",
-    "date": "2026-10-18T11:00:25+0000",
-    "place": "花蓮縣"
-   },
-   {
-    "type": "reel",
-    "title": "當我出現在了花蓮早上五點半的海邊。🌊 #七星潭 #日出 #大海 #旅行 #ta",
-    "url": "https://www.instagram.com/reel/Deoe4fYJmW2/",
-    "img": "ig/17999784876008221.jpg",
-    "date": "2026-10-18T10:41:03+0000",
-    "place": "七星潭"
-   },
-   {
-    "type": "reel",
-    "title": "There is a sea outside my window.🌊💙 #o",
-    "url": "https://www.instagram.com/reel/DeZFyhdpZGQ/",
-    "img": "ig/18369689917208356.jpg",
-    "date": "2026-10-12T11:09:49+0000",
-    "place": "花蓮縣"
-   },
-   {
-    "type": "reel",
-    "title": "我的窗外有片幸福的藍色大海。🌊💙 #花蓮 #七星潭 #旅行 #台灣 #民宿",
-    "url": "https://www.instagram.com/reel/DeY4HJSJnwz/",
-    "img": "ig/18005481254791666.jpg",
-    "date": "2026-10-12T09:10:53+0000",
-    "place": "七星潭"
-   },
-   {
-    "type": "video",
-    "id": "B9Pz3_E7Fmo",
-    "title": "挑戰一天內從雲林騎車到花蓮橫貫台灣！翻越3275M中央山脈直奔太魯閣，走過最壯麗的東西橫貫公路！｜中橫公路全紀錄【上集】｜【賴同學 Student Lai】",
-    "date": "2026-10-10T10:30:32Z",
-    "place": "合歡"
-   },
-   {
-    "type": "reel",
-    "title": "你認為台灣最美的風景是什麼呢？🇹🇼",
-    "url": "https://www.instagram.com/reel/Dd_NVECJ4Ni/",
-    "img": "ig/18120419281734386.jpg",
-    "date": "2026-10-02T09:55:35+0000",
-    "place": "合歡"
-   },
-   {
-    "type": "reel",
-    "title": "The sea of Hualien. 🩵💙🌊 #ocean #blue ",
-    "url": "https://www.instagram.com/reel/Dd4GcKlJ6CB/",
-    "img": "ig/18074140307469358.jpg",
-    "date": "2026-09-29T15:40:38+0000",
-    "place": "花蓮縣"
-   },
-   {
-    "type": "reel",
-    "title": "花蓮的海。🩵💙🌊 #花蓮 #東部 #海 #旅行 #台灣",
-    "url": "https://www.instagram.com/reel/Dd2uM5hQESv/",
-    "img": "ig/17952915045035652.jpg",
-    "date": "2026-09-29T03:01:48+0000",
-    "place": "花蓮縣"
-   },
-   {
-    "type": "post",
-    "title": "日出之前／Before Sunrise",
-    "url": "https://www.instagram.com/p/Ddyp34BCZkc/",
-    "img": "ig/17940728817358164.jpg",
-    "date": "2026-09-27T12:53:03+0000",
-    "place": "七星潭"
-   },
-   {
-    "type": "reel",
-    "title": "Taroko in Taiwan.⛰️ #motorcycle #travel ",
-    "url": "https://www.instagram.com/reel/DdtpyVFp5vl/",
-    "img": "ig/17984868876117395.jpg",
-    "date": "2026-09-25T14:18:28+0000",
-    "place": "太魯閣"
-   },
-   {
-    "type": "reel",
-    "title": "大自然在花蓮太魯閣留下的深刻印記。⛰️",
-    "url": "https://www.instagram.com/reel/DdrBa4CpdE0/",
-    "img": "ig/17933119221398861.jpg",
-    "date": "2026-09-24T13:50:06+0000",
-    "place": "太魯閣"
-   },
-   {
-    "type": "post",
-    "title": "黑色奇萊／The Dark Qilai",
-    "url": "https://www.instagram.com/p/DbsY8ASCd5c/",
-    "img": "ig/18187323961393346.jpg",
-    "date": "2026-08-06T09:26:50+0000",
-    "place": "合歡"
-   },
-   {
-    "type": "video",
-    "id": "8aBKdPg7bUM",
-    "title": "【夜衝合歡山】 第一人稱感受清晨南投台14甲的風景｜沉靜式騎車：台14甲｜KYMCO Krv180 & DJI Action 5Pro｜騎行純享 ep.10【賴同學 Student Lai】",
-    "date": "2025-07-25T10:00:28Z",
-    "place": "合歡"
+    "place": "清境"
    }
   ],
   "嘉義縣": [
@@ -1416,7 +1395,7 @@
     "id": "MKeLMeOFiyU",
     "title": "父子200公里熱血長征！竟然在阿里山看見絕美的夕陽雲海！騎進新中橫公路，意外解鎖「救鑰匙」技能！？｜南投信義 & 嘉義阿里山｜【賴同學 Student Lai】",
     "date": "2026-08-18T10:30:20Z",
-    "place": "玉山"
+    "place": "阿里山"
    },
    {
     "type": "reel",
@@ -1611,13 +1590,6 @@
    },
    {
     "type": "video",
-    "id": "jpTfIUH6Gjw",
-    "title": "挑戰！一日騎車往返去爬塔塔加五連峰！攀登玉山前最佳的高山練習場！整路都看得到玉山的登山路線！ ｜南投信義 塔塔加｜【賴同學 Student Lai】",
-    "date": "2026-01-10T12:01:32Z",
-    "place": "玉山"
-   },
-   {
-    "type": "video",
     "id": "uAd_AqC3UFM",
     "title": "從雲林沿著山稜徒步走進嘉義！一條茶園、竹林和雲海交錯的山脈縱走路線！沿途的美景真的會讓你捨不得離開啊！ ｜雲林古坑 & 嘉義梅山 雲嘉五連峰｜【賴同學 Student Lai】",
     "date": "2026-01-03T12:01:57Z",
@@ -1628,14 +1600,14 @@
     "id": "p4uQdGwlmGE",
     "title": "走進台灣百年歷史的古道「八通關古道」！建立在懸崖峭壁旁既危險又美麗的登山路線！【伐木累出遊 DAY3】｜ 八通關古道 雲龍瀑布｜【賴同學 Student Lai】",
     "date": "2025-11-29T12:01:39Z",
-    "place": "玉山"
+    "place": "塔塔加"
    },
    {
     "type": "video",
     "id": "yhytMFAjDHM",
     "title": "都騎車來到了阿里山怎麼能不去看日出呢！塔塔加的森林步道真的超美！【伐木累出遊 DAY2】｜嘉義阿里山 & 南投信義｜【賴同學 Student Lai】",
     "date": "2025-11-22T12:01:56Z",
-    "place": "玉山"
+    "place": "塔塔加"
    },
    {
     "type": "video",
@@ -1663,7 +1635,7 @@
     "id": "Xv0omVCdKUs",
     "title": "騎車橫跨數座大山來去追尋黃頭鷺的蹤影！沒想到竟然撲了個空！？｜後棟山、碧湖山茶園、太平老街、太興村 & 樟湖｜【賴同學 Student Lai】",
     "date": "2025-09-28T12:01:04Z",
-    "place": "太平雲梯"
+    "place": "嘉義縣"
    },
    {
     "type": "video",
@@ -1925,7 +1897,7 @@
     "id": "2TgHIWMPEt8",
     "title": "來去一日快閃台中！發掘台中的Outdoor景點！｜萬里長城步道 & 望高寮夜景公園｜【賴同學 Student Lai】",
     "date": "2025-08-16T10:00:06Z",
-    "place": "萬里"
+    "place": "萬里長城"
    }
   ],
   "屏東縣": [
@@ -1934,7 +1906,7 @@
     "id": "KgjmiPO1qp8",
     "title": "來去看2026的第一片海：雲林到屏東騎行全紀錄！半路竟然還爆胎了！？｜雲林 to 屏東｜【賴同學 Student Lai】",
     "date": "2026-04-28T09:03:27Z",
-    "place": "墾丁"
+    "place": "屏東縣"
    },
    {
     "type": "post",
@@ -1993,22 +1965,6 @@
     "img": "ig/18091710446246819.jpg",
     "date": "2026-04-12T11:51:22+0000",
     "place": "宜蘭縣"
-   },
-   {
-    "type": "video",
-    "id": "uAd_AqC3UFM",
-    "title": "從雲林沿著山稜徒步走進嘉義！一條茶園、竹林和雲海交錯的山脈縱走路線！沿途的美景真的會讓你捨不得離開啊！ ｜雲林古坑 & 嘉義梅山 雲嘉五連峰｜【賴同學 Student Lai】",
-    "date": "2026-01-03T12:01:57Z",
-    "place": "古坑"
-   }
-  ],
-  "新北市": [
-   {
-    "type": "video",
-    "id": "2TgHIWMPEt8",
-    "title": "來去一日快閃台中！發掘台中的Outdoor景點！｜萬里長城步道 & 望高寮夜景公園｜【賴同學 Student Lai】",
-    "date": "2025-08-16T10:00:06Z",
-    "place": "萬里"
    }
   ]
  },
