@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
+const EXCLUDE_MARKERS = ['#試驗'];                  // Instagram 說明裡有這些標記的內容不收（例如試驗 Reels 的說明加上 #試驗）
 const INCLUDE_REELS = true;                        // 是否收一般 Instagram Reels（true＝收，會獨立成一個分頁）
 const CHANNEL_ID = 'UCm5DmxNXdwovJmy_e1kxm3A';   // 你的 YouTube 頻道 ID
 const { YT_API_KEY, IG_TOKEN } = process.env;
@@ -24,15 +25,17 @@ const COUNTY_RE = {
 const norm = t => (t || '').replace(/台/g, '臺');
 let TOWNS = {};   // 鄉鎮市區全名 → 縣市（只收全台唯一的名稱，例如「仁愛鄉」）
 export function classify(text) {
-  const t = norm(text), set = new Set();
+  const t = norm(text), set = new Set(), why = [];
   let place = '';
-  for (const [c, re] of Object.entries(COUNTY_RE)) if (re.test(t)) set.add(c);                       // 縣市名
+  for (const [c, re] of Object.entries(COUNTY_RE)) { const m = re.exec(t); if (m) { set.add(c); why.push(m[0]); } }   // 縣市名
   // 景點／山名：若同時符合「萬里長城」和「萬里」，只採用較長的那個，避免誤判
   const hit = Object.keys(PLACES).filter(p => !p.startsWith('_') && t.includes(p));
-  for (const p of hit.filter(p => !hit.some(q => q !== p && q.includes(p)))) { PLACES[p].forEach(c => set.add(c)); place ||= p; }
-  for (const [n, c] of Object.entries(TOWNS)) if (t.includes(n)) { set.add(c); place ||= n; }         // 鄉鎮名
-  return { counties: [...set], place };
+  for (const p of hit.filter(p => !hit.some(q => q !== p && q.includes(p)))) { PLACES[p].forEach(c => set.add(c)); place ||= p; why.push(p); }
+  for (const [n, c] of Object.entries(TOWNS)) if (t.includes(n)) { set.add(c); place ||= n; why.push(n); }   // 鄉鎮名
+  return { counties: [...set], place, why };
 }
+// 依序嘗試多段文字，第一段就判斷得出縣市就停（例如影片：先看標題，再看說明開頭，最後才看全文），避免說明裡的其他影片連結造成誤判
+const classifyTiered = tiers => { for (const t of tiers) { const r = classify(t); if (r.counties.length) return r; } return { counties: [], place: '', why: [] }; };
 async function loadTowns() {   // 盡力而為：載入全台鄉鎮名稱，失敗就略過
   try {
     const r = await fetch('https://cdn.jsdelivr.net/npm/taiwan-atlas/towns-10t.json');
@@ -67,7 +70,7 @@ async function ytVideos() {
     for (const it of j.items || []) {
       const s = it.snippet;
       if (/^(Private|Deleted) video$/.test(s.title)) continue;
-      all.push({ id: s.resourceId.videoId, title: s.title, text: s.title + '\n' + (s.description || ''), date: s.publishedAt });
+      all.push({ id: s.resourceId.videoId, title: s.title, tiers: [s.title, s.title + '\n' + (s.description || '').slice(0, 200), s.title + '\n' + (s.description || '')], date: s.publishedAt });
     }
     token = j.nextPageToken; if (!token) break;
   }
@@ -110,6 +113,8 @@ async function igPosts() {
       const title = (cap.split('\n').find(l => l.trim()) || 'Instagram').trim().slice(0, 40);
       const isReel = /\/reel\//.test(m.permalink || '');   // Reels 的網址是 /reel/，一般貼文是 /p/
       if (isReel && !INCLUDE_REELS) continue;
+      if (EXCLUDE_MARKERS.some(k => cap.includes(k))) continue;
+      if (isReel) console.log('  Reels：', m.permalink, '｜', title);   // 列出所有 Reels 網址，方便你挑出不要的
       out.push({ type: isReel ? 'reel' : 'post', title, text: cap, url: m.permalink, img, date: m.timestamp });
     }
     url = j.paging?.next;
@@ -125,10 +130,10 @@ async function main() {
   const counties = {}, unmatched = [];
   for (const it of items) {
     const ov = OVERRIDES[it.url] || OVERRIDES[it.id];
-    const found = ov ? { counties: ov, place: '' } : classify(it.text);
-    const { text, ...rest } = it;
+    const found = ov ? { counties: ov, place: '', why: ['overrides.json'] } : classifyTiered(it.tiers || [it.text]);
+    const { text, tiers, ...rest } = it;
     if (!found.counties.length) { unmatched.push(rest); continue; }
-    for (const c of found.counties) (counties[c] ||= []).push({ ...rest, place: found.place || c });
+    for (const c of found.counties) { (counties[c] ||= []).push({ ...rest, place: found.place || c }); console.log(`  → ${c}｜${rest.title}｜命中：${found.why.join('、')}｜${rest.url || rest.id}`); }
   }
   for (const c in counties) counties[c].sort((a, b) => b.date.localeCompare(a.date));
   fs.writeFileSync('travels.json', JSON.stringify({ updated: new Date().toISOString(), counties, unmatched }, null, 1));
