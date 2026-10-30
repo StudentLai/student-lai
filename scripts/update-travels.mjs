@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const EXCLUDE_MARKERS = ['#試驗'];                  // Instagram 說明裡有這些標記的內容不收（例如試驗 Reels 的說明加上 #試驗）
+const HIDE_REELS_NOT_IN_FEED = false;              // 實驗用：true＝略過「沒有分享到動態」的 Reels（是否能擋掉試驗 Reels，要先看執行紀錄確認）
 const INCLUDE_REELS = true;                        // 是否收一般 Instagram Reels（true＝收，會獨立成一個分頁）
 const CHANNEL_ID = 'UCm5DmxNXdwovJmy_e1kxm3A';   // 你的 YouTube 頻道 ID
 const { YT_API_KEY, IG_TOKEN } = process.env;
@@ -114,7 +115,12 @@ async function igPosts() {
       const isReel = /\/reel\//.test(m.permalink || '');   // Reels 的網址是 /reel/，一般貼文是 /p/
       if (isReel && !INCLUDE_REELS) continue;
       if (EXCLUDE_MARKERS.some(k => cap.includes(k))) continue;
-      if (isReel) console.log('  Reels：', m.permalink, '｜', title);   // 列出所有 Reels 網址，方便你挑出不要的
+      if (isReel) {   // 列出所有 Reels 的網址與「是否分享到動態」，方便你挑出不要的
+        let shared;
+        try { shared = (await (await fetch(`https://graph.instagram.com/${m.id}?fields=is_shared_to_feed&access_token=${IG_TOKEN}`)).json()).is_shared_to_feed; } catch {}
+        console.log('  Reels：', m.permalink, '｜', title, '｜分享到動態：', shared);
+        if (HIDE_REELS_NOT_IN_FEED && shared === false) continue;
+      }
       out.push({ type: isReel ? 'reel' : 'post', title, text: cap, url: m.permalink, img, date: m.timestamp });
     }
     url = j.paging?.next;
