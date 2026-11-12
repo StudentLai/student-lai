@@ -1,7 +1,14 @@
 {
- "updated": "2026-10-29T16:05:41.069Z",
+ "updated": "2026-11-12T12:37:47.468Z",
  "counties": {
   "雲林縣": [
+   {
+    "type": "video",
+    "id": "8s99Jq8A6_4",
+    "title": "【完整版】中橫公路橫貫台灣：2天1夜全紀錄！翻越3275M中央山脈直奔花蓮太魯閣峽谷｜雲林 - 花蓮：中橫公路全紀錄｜【賴同學 Student Lai】",
+    "date": "2026-11-02T10:30:05Z",
+    "place": "太魯閣"
+   },
    {
     "type": "video",
     "id": "a3uWHLcntn4",
@@ -245,46 +252,6 @@
     "place": "古坑"
    },
    {
-    "type": "post",
-    "title": "風起雲湧／The wind rises and the clouds surge",
-    "url": "https://www.instagram.com/p/DUVYBF-Cd7c/",
-    "img": "ig/17845705896682796.jpg",
-    "date": "2026-02-04T11:16:30+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "看見了這片風景，於是我停下了車。",
-    "url": "https://www.instagram.com/reel/DUNjOXJiUe9/",
-    "img": "ig/17945645562099880.jpg",
-    "date": "2026-02-01T10:24:06+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "漫步在五元兩角的竹製長廊，感受著孟宗竹林的綠意與生機。",
-    "url": "https://www.instagram.com/reel/DUMm1CRj5b0/",
-    "img": "ig/18071238224576158.jpg",
-    "date": "2026-02-01T01:33:48+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "我想我找到了那片最美的雲海。",
-    "url": "https://www.instagram.com/reel/DUITf-WiRzo/",
-    "img": "ig/18107706496665426.jpg",
-    "date": "2026-01-30T09:29:22+0000",
-    "place": "古坑"
-   },
-   {
-    "type": "reel",
-    "title": "那一天冒著風雨上山遇見的壯觀雲海。",
-    "url": "https://www.instagram.com/reel/DUFtWkWgZ-j/",
-    "img": "ig/18374824705082600.jpg",
-    "date": "2026-01-29T09:19:06+0000",
-    "place": "古坑"
-   },
-   {
     "type": "video",
     "id": "uAd_AqC3UFM",
     "title": "從雲林沿著山稜徒步走進嘉義！一條茶園、竹林和雲海交錯的山脈縱走路線！沿途的美景真的會讓你捨不得離開啊！ ｜雲林古坑 & 嘉義梅山 雲嘉五連峰｜【賴同學 Student Lai】",
@@ -318,16 +285,40 @@
     "title": "颱風過後再次騎車上山，山變得如何了？滿地都是泥土和落石！？｜雲林古坑 & 南投桶頭｜獨旅系列 ep. 17【賴同學 Student Lai】",
     "date": "2025-07-26T10:01:09Z",
     "place": "古坑"
-   },
-   {
-    "type": "video",
-    "id": "JvMjF50J7gA",
-    "title": "不看Google地圖成功抵達了白水湖壽島！？｜不看Google地圖去旅行：出發去看海 ep.1（下）【CC字幕】【賴同學 Student Lai】",
-    "date": "2025-07-08T10:00:36Z",
-    "place": "雲林縣"
    }
   ],
   "花蓮縣": [
+   {
+    "type": "post",
+    "title": "山海／Mountains and Sea",
+    "url": "https://www.instagram.com/p/DfY_yFrCZOE/",
+    "img": "ig/18108839957217051.jpg",
+    "date": "2026-11-06T06:47:02+0000",
+    "place": "七星潭"
+   },
+   {
+    "type": "reel",
+    "title": "你可曾見過台灣深山裡的「太魯閣藍」？ #花蓮 #太魯閣 #旅行 #中橫 #tai",
+    "url": "https://www.instagram.com/reel/DfUJMzjJyoN/",
+    "img": "ig/18432234388147219.jpg",
+    "date": "2026-11-04T09:37:36+0000",
+    "place": "太魯閣"
+   },
+   {
+    "type": "video",
+    "id": "8s99Jq8A6_4",
+    "title": "【完整版】中橫公路橫貫台灣：2天1夜全紀錄！翻越3275M中央山脈直奔花蓮太魯閣峽谷｜雲林 - 花蓮：中橫公路全紀錄｜【賴同學 Student Lai】",
+    "date": "2026-11-02T10:30:05Z",
+    "place": "太魯閣"
+   },
+   {
+    "type": "reel",
+    "title": "走中橫公路去到花蓮太魯閣不容錯過的地方！#太魯閣 #花蓮 #旅行 #天祥 #ta",
+    "url": "https://www.instagram.com/reel/DfO_ZKNpU1r/",
+    "img": "ig/17967097802982050.jpg",
+    "date": "2026-11-02T09:36:10+0000",
+    "place": "太魯閣"
+   },
    {
     "type": "video",
     "id": "a3uWHLcntn4",
@@ -448,6 +439,22 @@
    }
   ],
   "南投縣": [
+   {
+    "type": "reel",
+    "title": "一分鐘帶你走進南投百年歷史的八通關古道。⛰️ #南投 #登山 #風景 #步道 #",
+    "url": "https://www.instagram.com/reel/DfL5wj7pfFB/",
+    "img": "ig/18144129481612642.jpg",
+    "date": "2026-11-01T04:52:06+0000",
+    "place": "南投縣"
+   },
+   {
+    "type": "reel",
+    "title": "有點chill~ 的合歡山。⛰️ #合歡山 #登山 #旅行 #攝影 #taiwa",
+    "url": "https://www.instagram.com/reel/DfJzKShJsVX/",
+    "img": "ig/18130200625866023.jpg",
+    "date": "2026-10-31T09:10:06+0000",
+    "place": "合歡"
+   },
    {
     "type": "reel",
     "title": "用鏡頭紀錄下了八通關古道的山林痕跡。🌿 #南投 #東埔 #攝影 #登山 #ta",
@@ -1360,6 +1367,22 @@
   "嘉義縣": [
    {
     "type": "reel",
+    "title": "別把以後再說，變成了一輩子的遺憾。",
+    "url": "https://www.instagram.com/reel/Dfose7yvMm0/",
+    "img": "ig/18097760831161005.jpg",
+    "date": "2026-11-12T09:07:06+0000",
+    "place": "嘉義縣"
+   },
+   {
+    "type": "reel",
+    "title": "不用再去嘉義阿里山人擠人看日出了！☀️ #日出 #嘉義 #茶園 #旅行 #tai",
+    "url": "https://www.instagram.com/reel/DfhAWUjJuj-/",
+    "img": "ig/17956110363271785.jpg",
+    "date": "2026-11-09T09:29:09+0000",
+    "place": "阿里山"
+   },
+   {
+    "type": "reel",
     "title": "你認為台灣最美的風景是什麼呢？🇹🇼",
     "url": "https://www.instagram.com/reel/Dd_NVECJ4Ni/",
     "img": "ig/18120419281734386.jpg",
@@ -1565,30 +1588,6 @@
     "place": "嘉義縣"
    },
    {
-    "type": "reel",
-    "title": "走在這裡不用著急的登頂，只需要慢慢的感受森林裡的變換。",
-    "url": "https://www.instagram.com/reel/DUVMIw0gQfD/",
-    "img": "ig/18028134341603512.jpg",
-    "date": "2026-02-04T09:34:43+0000",
-    "place": "阿里山"
-   },
-   {
-    "type": "reel",
-    "title": "當我走進了迷霧之中。",
-    "url": "https://www.instagram.com/reel/DUSlBSyCYRx/",
-    "img": "ig/18075993374341306.jpg",
-    "date": "2026-02-03T09:12:58+0000",
-    "place": "嘉義縣"
-   },
-   {
-    "type": "post",
-    "title": "陽光森林／Sunshine Forest",
-    "url": "https://www.instagram.com/p/DUK74b-ifwa/",
-    "img": "ig/18053636000429865.jpg",
-    "date": "2026-01-31T09:58:14+0000",
-    "place": "阿里山"
-   },
-   {
     "type": "video",
     "id": "uAd_AqC3UFM",
     "title": "從雲林沿著山稜徒步走進嘉義！一條茶園、竹林和雲海交錯的山脈縱走路線！沿途的美景真的會讓你捨不得離開啊！ ｜雲林古坑 & 嘉義梅山 雲嘉五連峰｜【賴同學 Student Lai】",
@@ -1650,13 +1649,6 @@
     "title": "遇到道路封閉怎麼辦？那就調轉車頭，不看地圖來一場山間遨遊的冒險！｜清水溪橋、龍眼村龍興宮、碧湖山茶園 & 太平36彎｜【不看Google地圖去旅行 ep.2】【賴同學 Student Lai】",
     "date": "2025-08-24T10:01:13Z",
     "place": "太平雲梯"
-   },
-   {
-    "type": "video",
-    "id": "JvMjF50J7gA",
-    "title": "不看Google地圖成功抵達了白水湖壽島！？｜不看Google地圖去旅行：出發去看海 ep.1（下）【CC字幕】【賴同學 Student Lai】",
-    "date": "2025-07-08T10:00:36Z",
-    "place": "嘉義縣"
    }
   ],
   "臺中市": [
@@ -1974,6 +1966,13 @@
    "id": "oZGUp1Beybo",
    "title": "挑戰人生中的第一座小百岳！竟然一次就爬了兩座！？就算遇到路障也無法阻擋我要攻頂的心！｜大尖山 & 二尖山｜【賴同學 Student Lai】",
    "date": "2025-09-06T10:01:22Z"
+  },
+  {
+   "type": "reel",
+   "title": "Walking into the mountains.⛰️ #mountains",
+   "url": "https://www.instagram.com/reel/DfMuTvYpk0y/",
+   "img": "ig/18137058196734710.jpg",
+   "date": "2026-11-01T12:25:35+0000"
   },
   {
    "type": "reel",
