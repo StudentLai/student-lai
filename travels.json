@@ -1,12 +1,36 @@
 {
- "updated": "2026-11-12T12:37:47.468Z",
+ "updated": "2026-11-12T12:57:37.733Z",
  "counties": {
-  "雲林縣": [
+  "花蓮縣": [
+   {
+    "type": "post",
+    "title": "山海／Mountains and Sea",
+    "url": "https://www.instagram.com/p/DfY_yFrCZOE/",
+    "img": "ig/18108839957217051.jpg",
+    "date": "2026-11-06T06:47:02+0000",
+    "place": "七星潭"
+   },
+   {
+    "type": "reel",
+    "title": "你可曾見過台灣深山裡的「太魯閣藍」？ #花蓮 #太魯閣 #旅行 #中橫 #tai",
+    "url": "https://www.instagram.com/reel/DfUJMzjJyoN/",
+    "img": "ig/18432234388147219.jpg",
+    "date": "2026-11-04T09:37:36+0000",
+    "place": "太魯閣"
+   },
    {
     "type": "video",
     "id": "8s99Jq8A6_4",
     "title": "【完整版】中橫公路橫貫台灣：2天1夜全紀錄！翻越3275M中央山脈直奔花蓮太魯閣峽谷｜雲林 - 花蓮：中橫公路全紀錄｜【賴同學 Student Lai】",
     "date": "2026-11-02T10:30:05Z",
+    "place": "七星潭"
+   },
+   {
+    "type": "reel",
+    "title": "走中橫公路去到花蓮太魯閣不容錯過的地方！#太魯閣 #花蓮 #旅行 #天祥 #ta",
+    "url": "https://www.instagram.com/reel/DfO_ZKNpU1r/",
+    "img": "ig/17967097802982050.jpg",
+    "date": "2026-11-02T09:36:10+0000",
     "place": "太魯閣"
    },
    {
@@ -17,10 +41,83 @@
     "place": "太魯閣"
    },
    {
+    "type": "reel",
+    "title": "當我帶著相機來到花蓮早上的海邊。📷 #花蓮 #日出 #大海 #攝影 #taiw",
+    "url": "https://www.instagram.com/reel/DerUxJ5pNgK/",
+    "img": "ig/18105520688363951.jpg",
+    "date": "2026-10-19T13:06:51+0000",
+    "place": "花蓮縣"
+   },
+   {
+    "type": "reel",
+    "title": "當我出現在了花蓮早上五點半的海邊。🌊 #七星潭 #日出 #大海 #旅行 #ta",
+    "url": "https://www.instagram.com/reel/Deoe4fYJmW2/",
+    "img": "ig/17999784876008221.jpg",
+    "date": "2026-10-18T10:41:03+0000",
+    "place": "七星潭"
+   },
+   {
+    "type": "reel",
+    "title": "我的窗外有片幸福的藍色大海。🌊💙 #花蓮 #七星潭 #旅行 #台灣 #民宿",
+    "url": "https://www.instagram.com/reel/DeY4HJSJnwz/",
+    "img": "ig/18005481254791666.jpg",
+    "date": "2026-10-12T09:10:53+0000",
+    "place": "七星潭"
+   },
+   {
     "type": "video",
     "id": "B9Pz3_E7Fmo",
     "title": "挑戰一天內從雲林騎車到花蓮橫貫台灣！翻越3275M中央山脈直奔太魯閣，走過最壯麗的東西橫貫公路！｜中橫公路全紀錄【上集】｜【賴同學 Student Lai】",
     "date": "2026-10-10T10:30:32Z",
+    "place": "七星潭"
+   },
+   {
+    "type": "reel",
+    "title": "你認為台灣最美的風景是什麼呢？🇹🇼",
+    "url": "https://www.instagram.com/reel/Dd_NVECJ4Ni/",
+    "img": "ig/18120419281734386.jpg",
+    "date": "2026-10-02T09:55:35+0000",
+    "place": "水里"
+   },
+   {
+    "type": "reel",
+    "title": "花蓮的海。🩵💙🌊 #花蓮 #東部 #海 #旅行 #台灣",
+    "url": "https://www.instagram.com/reel/Dd2uM5hQESv/",
+    "img": "ig/17952915045035652.jpg",
+    "date": "2026-09-29T03:01:48+0000",
+    "place": "花蓮縣"
+   },
+   {
+    "type": "post",
+    "title": "日出之前／Before Sunrise",
+    "url": "https://www.instagram.com/p/Ddyp34BCZkc/",
+    "img": "ig/17940728817358164.jpg",
+    "date": "2026-09-27T12:53:03+0000",
+    "place": "花蓮縣"
+   },
+   {
+    "type": "reel",
+    "title": "大自然在花蓮太魯閣留下的深刻印記。⛰️",
+    "url": "https://www.instagram.com/reel/DdrBa4CpdE0/",
+    "img": "ig/17933119221398861.jpg",
+    "date": "2026-09-24T13:50:06+0000",
+    "place": "太魯閣"
+   },
+   {
+    "type": "post",
+    "title": "黑色奇萊／The Dark Qilai",
+    "url": "https://www.instagram.com/p/DbsY8ASCd5c/",
+    "img": "ig/18187323961393346.jpg",
+    "date": "2026-08-06T09:26:50+0000",
+    "place": "奇萊"
+   }
+  ],
+  "雲林縣": [
+   {
+    "type": "video",
+    "id": "a3uWHLcntn4",
+    "title": "帶父追日！一日200多公里從花蓮日出騎到雲林日落，重返中橫公路與太魯閣峽谷！｜中橫公路全紀錄【下集】｜【賴同學 Student Lai】",
+    "date": "2026-10-25T10:30:10Z",
     "place": "太魯閣"
    },
    {
@@ -29,7 +126,7 @@
     "url": "https://www.instagram.com/reel/Dd_NVECJ4Ni/",
     "img": "ig/18120419281734386.jpg",
     "date": "2026-10-02T09:55:35+0000",
-    "place": "合歡"
+    "place": "水里"
    },
    {
     "type": "reel",
@@ -52,7 +149,7 @@
     "url": "https://www.instagram.com/reel/DdQxNmspDho/",
     "img": "ig/18108829526604125.jpg",
     "date": "2026-09-14T09:07:22+0000",
-    "place": "古坑"
+    "place": "雲林縣"
    },
    {
     "type": "reel",
@@ -71,20 +168,12 @@
     "place": "古坑"
    },
    {
-    "type": "reel",
-    "title": "Yunlin Daily, Taiwan. 🌾 #daily #photogr",
-    "url": "https://www.instagram.com/reel/Dc5tiDipTXs/",
-    "img": "ig/18333632608276029.jpg",
-    "date": "2026-09-05T10:12:55+0000",
-    "place": "雲林縣"
-   },
-   {
     "type": "post",
     "title": "山的光影／Mountain's Light and Shadow",
     "url": "https://www.instagram.com/p/Db7e7tVCQ4u/",
     "img": "ig/18018948950880635.jpg",
     "date": "2026-08-12T06:07:49+0000",
-    "place": "古坑"
+    "place": "雲林縣"
    },
    {
     "type": "video",
@@ -103,14 +192,6 @@
    },
    {
     "type": "reel",
-    "title": "Is this the bamboo forest you imagined? ",
-    "url": "https://www.instagram.com/reel/Dbkos7CpTHW/",
-    "img": "ig/18128733049657051.jpg",
-    "date": "2026-08-03T09:12:37+0000",
-    "place": "雲林縣"
-   },
-   {
-    "type": "reel",
     "title": "陽光是大自然最好的補光燈。✨",
     "url": "https://www.instagram.com/reel/DaU2sq2pPsL/",
     "img": "ig/17865511773593736.jpg",
@@ -123,7 +204,7 @@
     "url": "https://www.instagram.com/p/DaC3on_iSnh/",
     "img": "ig/18191994016374431.jpg",
     "date": "2026-06-26T09:55:34+0000",
-    "place": "木馬古道"
+    "place": "雲林縣"
    },
    {
     "type": "reel",
@@ -146,7 +227,7 @@
     "url": "https://www.instagram.com/reel/DXTu6x4Cayj/",
     "img": "ig/18103194394758211.jpg",
     "date": "2026-04-19T09:34:33+0000",
-    "place": "古坑"
+    "place": "雲林縣"
    },
    {
     "type": "reel",
@@ -186,7 +267,7 @@
     "url": "https://www.instagram.com/reel/DV0dyooCQK_/",
     "img": "ig/17888501412443377.jpg",
     "date": "2026-03-13T09:47:46+0000",
-    "place": "古坑"
+    "place": "雲林縣"
    },
    {
     "type": "reel",
@@ -202,7 +283,7 @@
     "url": "https://www.instagram.com/reel/DVvXMnFgSuw/",
     "img": "ig/17908526139358881.jpg",
     "date": "2026-03-11T10:02:21+0000",
-    "place": "古坑"
+    "place": "雲林縣"
    },
    {
     "type": "video",
@@ -217,7 +298,7 @@
     "url": "https://www.instagram.com/reel/DVnovnGgW3A/",
     "img": "ig/17941392135176263.jpg",
     "date": "2026-03-08T10:01:16+0000",
-    "place": "古坑"
+    "place": "雲林縣"
    },
    {
     "type": "post",
@@ -270,7 +351,7 @@
     "id": "bdhwlN5lZ0Y",
     "title": "炎熱的天氣跑到華山去走步道~ 意外發現展望超好的祕境！竟然遇到有人倒在地上！？｜華山11號步道｜【賴同學 Student Lai】",
     "date": "2025-08-30T10:01:04Z",
-    "place": "古坑"
+    "place": "雲林縣"
    },
    {
     "type": "video",
@@ -285,157 +366,125 @@
     "title": "颱風過後再次騎車上山，山變得如何了？滿地都是泥土和落石！？｜雲林古坑 & 南投桶頭｜獨旅系列 ep. 17【賴同學 Student Lai】",
     "date": "2025-07-26T10:01:09Z",
     "place": "古坑"
-   }
-  ],
-  "花蓮縣": [
-   {
-    "type": "post",
-    "title": "山海／Mountains and Sea",
-    "url": "https://www.instagram.com/p/DfY_yFrCZOE/",
-    "img": "ig/18108839957217051.jpg",
-    "date": "2026-11-06T06:47:02+0000",
-    "place": "七星潭"
-   },
-   {
-    "type": "reel",
-    "title": "你可曾見過台灣深山裡的「太魯閣藍」？ #花蓮 #太魯閣 #旅行 #中橫 #tai",
-    "url": "https://www.instagram.com/reel/DfUJMzjJyoN/",
-    "img": "ig/18432234388147219.jpg",
-    "date": "2026-11-04T09:37:36+0000",
-    "place": "太魯閣"
    },
    {
     "type": "video",
-    "id": "8s99Jq8A6_4",
-    "title": "【完整版】中橫公路橫貫台灣：2天1夜全紀錄！翻越3275M中央山脈直奔花蓮太魯閣峽谷｜雲林 - 花蓮：中橫公路全紀錄｜【賴同學 Student Lai】",
-    "date": "2026-11-02T10:30:05Z",
-    "place": "太魯閣"
-   },
-   {
-    "type": "reel",
-    "title": "走中橫公路去到花蓮太魯閣不容錯過的地方！#太魯閣 #花蓮 #旅行 #天祥 #ta",
-    "url": "https://www.instagram.com/reel/DfO_ZKNpU1r/",
-    "img": "ig/17967097802982050.jpg",
-    "date": "2026-11-02T09:36:10+0000",
-    "place": "太魯閣"
+    "id": "JvMjF50J7gA",
+    "title": "不看Google地圖成功抵達了白水湖壽島！？｜不看Google地圖去旅行：出發去看海 ep.1（下）【CC字幕】【賴同學 Student Lai】",
+    "date": "2025-07-08T10:00:36Z",
+    "place": "雲林縣"
    },
    {
     "type": "video",
-    "id": "a3uWHLcntn4",
-    "title": "帶父追日！一日200多公里從花蓮日出騎到雲林日落，重返中橫公路與太魯閣峽谷！｜中橫公路全紀錄【下集】｜【賴同學 Student Lai】",
-    "date": "2026-10-25T10:30:10Z",
-    "place": "太魯閣"
-   },
-   {
-    "type": "reel",
-    "title": "當我帶著相機來到花蓮早上的海邊。📷 #花蓮 #日出 #大海 #攝影 #taiw",
-    "url": "https://www.instagram.com/reel/DerUxJ5pNgK/",
-    "img": "ig/18105520688363951.jpg",
-    "date": "2026-10-19T13:06:51+0000",
-    "place": "花蓮縣"
-   },
-   {
-    "type": "reel",
-    "title": "Shot on Hunlien morning. 📷 #ocean #sea ",
-    "url": "https://www.instagram.com/reel/DerKiBmptB0/",
-    "img": "ig/18153355102557404.jpg",
-    "date": "2026-10-19T11:42:38+0000",
-    "place": "花蓮縣"
-   },
-   {
-    "type": "reel",
-    "title": "Sunrise in Hualien. 🌅 #sunrise #sea #vi",
-    "url": "https://www.instagram.com/reel/DeohZ0epZnr/",
-    "img": "ig/17975452842129146.jpg",
-    "date": "2026-10-18T11:00:25+0000",
-    "place": "花蓮縣"
-   },
-   {
-    "type": "reel",
-    "title": "當我出現在了花蓮早上五點半的海邊。🌊 #七星潭 #日出 #大海 #旅行 #ta",
-    "url": "https://www.instagram.com/reel/Deoe4fYJmW2/",
-    "img": "ig/17999784876008221.jpg",
-    "date": "2026-10-18T10:41:03+0000",
-    "place": "七星潭"
-   },
-   {
-    "type": "reel",
-    "title": "There is a sea outside my window.🌊💙 #o",
-    "url": "https://www.instagram.com/reel/DeZFyhdpZGQ/",
-    "img": "ig/18369689917208356.jpg",
-    "date": "2026-10-12T11:09:49+0000",
-    "place": "花蓮縣"
-   },
-   {
-    "type": "reel",
-    "title": "我的窗外有片幸福的藍色大海。🌊💙 #花蓮 #七星潭 #旅行 #台灣 #民宿",
-    "url": "https://www.instagram.com/reel/DeY4HJSJnwz/",
-    "img": "ig/18005481254791666.jpg",
-    "date": "2026-10-12T09:10:53+0000",
-    "place": "七星潭"
+    "id": "Cq9gq2bhfFo",
+    "title": "不看Google地圖去旅行，到底能否成功抵達目的地？｜不看Google地圖去旅行：出發去看海 ep.1（上）【CC字幕】【賴同學 Student Lai】",
+    "date": "2025-07-04T22:00:22Z",
+    "place": "雲林縣"
    },
    {
     "type": "video",
-    "id": "B9Pz3_E7Fmo",
-    "title": "挑戰一天內從雲林騎車到花蓮橫貫台灣！翻越3275M中央山脈直奔太魯閣，走過最壯麗的東西橫貫公路！｜中橫公路全紀錄【上集】｜【賴同學 Student Lai】",
-    "date": "2026-10-10T10:30:32Z",
-    "place": "太魯閣"
+    "id": "lIWW9tXXlSM",
+    "title": "【騎行純享】 第一人稱感受西螺大橋的風景｜沉靜式騎車：西螺大橋｜KYMCO Krv180 & DJI Action 5Pro 【4K 2160p】",
+    "date": "2025-07-03T09:30:26Z",
+    "place": "雲林縣"
    },
    {
-    "type": "reel",
-    "title": "你認為台灣最美的風景是什麼呢？🇹🇼",
-    "url": "https://www.instagram.com/reel/Dd_NVECJ4Ni/",
-    "img": "ig/18120419281734386.jpg",
-    "date": "2026-10-02T09:55:35+0000",
-    "place": "合歡"
+    "type": "video",
+    "id": "4jXiamzRJFI",
+    "title": "西螺大橋有免費伴手禮可以拿？｜西螺大橋：紙箱奇遇記｜獨旅系列 ep.14【CC字幕】【賴同學 Student Lai】",
+    "date": "2025-06-28T10:30:03Z",
+    "place": "雲林縣"
    },
    {
-    "type": "reel",
-    "title": "The sea of Hualien. 🩵💙🌊 #ocean #blue ",
-    "url": "https://www.instagram.com/reel/Dd4GcKlJ6CB/",
-    "img": "ig/18074140307469358.jpg",
-    "date": "2026-09-29T15:40:38+0000",
-    "place": "花蓮縣"
+    "type": "video",
+    "id": "QvQfGQCaFMU",
+    "title": "【騎行純享】陰天裡的騎行漫遊，最終與見了美麗的夕陽！｜沉靜式騎車：台16線 — 台21線｜ KYMCO Krv180 & DJI Action 5Pro 【4K 2160p】",
+    "date": "2025-06-23T09:45:42Z",
+    "place": "日月潭"
    },
    {
-    "type": "reel",
-    "title": "花蓮的海。🩵💙🌊 #花蓮 #東部 #海 #旅行 #台灣",
-    "url": "https://www.instagram.com/reel/Dd2uM5hQESv/",
-    "img": "ig/17952915045035652.jpg",
-    "date": "2026-09-29T03:01:48+0000",
-    "place": "花蓮縣"
+    "type": "video",
+    "id": "GNGeU-Lq9Bc",
+    "title": "【騎行純享】騎著車穿梭於大雨傾盆的山間 | 沉靜式騎車：雲林 荷包山 – 華山 | KYMCO Krv180 & DJI Action 5Pro 【4K 2160p】",
+    "date": "2025-06-19T10:55:09Z",
+    "place": "雲林縣"
    },
    {
-    "type": "post",
-    "title": "日出之前／Before Sunrise",
-    "url": "https://www.instagram.com/p/Ddyp34BCZkc/",
-    "img": "ig/17940728817358164.jpg",
-    "date": "2026-09-27T12:53:03+0000",
-    "place": "七星潭"
+    "type": "video",
+    "id": "7cuTIUmETlU",
+    "title": "【獨旅系列】雨天的山上會遇到甚麼樣的風景呢？山上山下兩樣情！｜雨之雲林：晴雨交錯｜荷苞山 — 華山｜DJI Action 5Pro & KYMCO Krv180【CC字幕】",
+    "date": "2025-06-13T09:53:56Z",
+    "place": "雲林縣"
    },
    {
-    "type": "reel",
-    "title": "Taroko in Taiwan.⛰️ #motorcycle #travel ",
-    "url": "https://www.instagram.com/reel/DdtpyVFp5vl/",
-    "img": "ig/17984868876117395.jpg",
-    "date": "2026-09-25T14:18:28+0000",
-    "place": "太魯閣"
+    "type": "video",
+    "id": "5rHx93c085Q",
+    "title": "【騎行純享】一條鮮為人知的美麗公路！沉靜式騎車 – 縣道149甲 | 草嶺 – 來吉 #krv #機車旅行",
+    "date": "2025-05-29T09:42:24Z",
+    "place": "雲林縣"
    },
    {
-    "type": "reel",
-    "title": "大自然在花蓮太魯閣留下的深刻印記。⛰️",
-    "url": "https://www.instagram.com/reel/DdrBa4CpdE0/",
-    "img": "ig/17933119221398861.jpg",
-    "date": "2026-09-24T13:50:06+0000",
-    "place": "太魯閣"
+    "type": "video",
+    "id": "xC5UD0Y3JR0",
+    "title": "【獨旅系列】前進山豬的故鄉，來吉！草嶺公路真的太美了！ | 山豬公園 草嶺公路 來吉 | 部落之旅（一）【CC字幕】#krv #機車旅行",
+    "date": "2025-05-21T10:46:37Z",
+    "place": "阿里山"
    },
    {
-    "type": "post",
-    "title": "黑色奇萊／The Dark Qilai",
-    "url": "https://www.instagram.com/p/DbsY8ASCd5c/",
-    "img": "ig/18187323961393346.jpg",
-    "date": "2026-08-06T09:26:50+0000",
-    "place": "合歡"
+    "type": "video",
+    "id": "XioFay8unAs",
+    "title": "【獨旅系列】來去草嶺水濂洞步道尋找美猴王 | 階梯攀爬量已達上限【CC字幕】",
+    "date": "2025-05-07T10:17:18Z",
+    "place": "雲林縣"
+   },
+   {
+    "type": "video",
+    "id": "FcQD9j_LWNw",
+    "title": "【獨旅系列】登山肉腳勇闖嘉南雲峰 | 驚喜遇見山羌？ | CC字幕",
+    "date": "2025-04-29T11:36:09Z",
+    "place": "雲林縣"
+   },
+   {
+    "type": "video",
+    "id": "dfS3UrxKtZk",
+    "title": "【獨旅系列】旅途是否迎來曙光呢 | 219公里的回家路（下） | 苗栗 – 雲林",
+    "date": "2025-04-11T10:58:17Z",
+    "place": "雲林縣"
+   },
+   {
+    "type": "video",
+    "id": "QIOwP3zlNac",
+    "title": "【家族旅行】好天氣就是要出門走走 | 與家人的賞花慢旅 | 雲林石壁",
+    "date": "2025-03-27T16:47:54Z",
+    "place": "雲林縣"
+   },
+   {
+    "type": "video",
+    "id": "IPT7ZeYEreU",
+    "title": "【機車旅行】沒有太陽的旅程，以及追逐雲海的我們。| 雲林石壁一日旅行☁️ | 終於不是獨旅系列了！",
+    "date": "2025-02-17T15:36:42Z",
+    "place": "雲林縣"
+   },
+   {
+    "type": "video",
+    "id": "hXiJi7tbVQQ",
+    "title": "【過年走春】半路打道回府而收穫了意外之美 | 旅途計畫外的美景🏮 | 雲林斗六",
+    "date": "2025-02-06T13:32:02Z",
+    "place": "斗六"
+   },
+   {
+    "type": "video",
+    "id": "EhdFO44TxxM",
+    "title": "【機車旅行】DAY2 屏東➡️雲林。二天一夜的機車騎行之旅（下）。「風景很美，風也很大。」",
+    "date": "2025-01-13T16:36:53Z",
+    "place": "雲林縣"
+   },
+   {
+    "type": "video",
+    "id": "7XvSN3HxDHI",
+    "title": "【機車旅行】雲林➡️屏東。兩天一夜的機車騎行之旅（上）。",
+    "date": "2025-01-12T14:16:48Z",
+    "place": "雲林縣"
    }
   ],
   "南投縣": [
@@ -509,15 +558,7 @@
     "url": "https://www.instagram.com/reel/Dd_NVECJ4Ni/",
     "img": "ig/18120419281734386.jpg",
     "date": "2026-10-02T09:55:35+0000",
-    "place": "合歡"
-   },
-   {
-    "type": "reel",
-    "title": "I took photos at Hehuan Mountain on a cl",
-    "url": "https://www.instagram.com/reel/DdWWxh8JV-W/",
-    "img": "ig/17931513630144567.jpg",
-    "date": "2026-09-16T13:09:23+0000",
-    "place": "合歡"
+    "place": "水里"
    },
    {
     "type": "reel",
@@ -525,7 +566,7 @@
     "url": "https://www.instagram.com/reel/DdV9do_JlU2/",
     "img": "ig/18094993694649029.jpg",
     "date": "2026-09-16T09:30:34+0000",
-    "place": "合歡"
+    "place": "石門山"
    },
    {
     "type": "video",
@@ -574,14 +615,6 @@
     "place": "日月潭"
    },
    {
-    "type": "reel",
-    "title": "Building in Taiwan. 🏗️ #building #taiwa",
-    "url": "https://www.instagram.com/reel/Dc8Kcnsp8ov/",
-    "img": "ig/17939056164358385.jpg",
-    "date": "2026-09-06T09:02:09+0000",
-    "place": "日月潭"
-   },
-   {
     "type": "post",
     "title": "合歡北峰／Hehuan North Peak ⛰️",
     "url": "https://www.instagram.com/p/Dc5BLLjiXV_/",
@@ -591,27 +624,11 @@
    },
    {
     "type": "reel",
-    "title": "A giant building high in the mountains o",
-    "url": "https://www.instagram.com/reel/Dc0m3gupCS3/",
-    "img": "ig/17896036203656933.jpg",
-    "date": "2026-09-03T10:36:29+0000",
-    "place": "合歡"
-   },
-   {
-    "type": "reel",
     "title": "你也曾發現合歡北峰上的巨型建築嗎？⛰️ #合歡山 #旅行 #百岳 #台灣 #攝影",
     "url": "https://www.instagram.com/reel/Dc0gYYAJT-4/",
     "img": "ig/17932753209381605.jpg",
     "date": "2026-09-03T09:41:53+0000",
     "place": "合歡"
-   },
-   {
-    "type": "reel",
-    "title": "Sun Moon Lake, Taiwan. ✨ #travel #photog",
-    "url": "https://www.instagram.com/reel/DcyB1OOpcTj/",
-    "img": "ig/17961993749980921.jpg",
-    "date": "2026-09-02T10:36:14+0000",
-    "place": "日月潭"
    },
    {
     "type": "reel",
@@ -638,14 +655,6 @@
     "place": "合歡"
    },
    {
-    "type": "reel",
-    "title": "Taiwan's high mountains.⛰️🇹🇼 #mountain",
-    "url": "https://www.instagram.com/reel/DcYIJjHpSRf/",
-    "img": "ig/18082700777406373.jpg",
-    "date": "2026-08-23T09:10:27+0000",
-    "place": "合歡"
-   },
-   {
     "type": "video",
     "id": "MKeLMeOFiyU",
     "title": "父子200公里熱血長征！竟然在阿里山看見絕美的夕陽雲海！騎進新中橫公路，意外解鎖「救鑰匙」技能！？｜南投信義 & 嘉義阿里山｜【賴同學 Student Lai】",
@@ -658,14 +667,6 @@
     "url": "https://www.instagram.com/p/DcF7CSdCQCv/",
     "img": "ig/18111510128069759.jpg",
     "date": "2026-08-16T07:25:48+0000",
-    "place": "水里"
-   },
-   {
-    "type": "reel",
-    "title": "Nantou, Taiwan. ⛰️",
-    "url": "https://www.instagram.com/reel/DcBfsZOpIr8/",
-    "img": "ig/17897328039589116.jpg",
-    "date": "2026-08-14T14:11:49+0000",
     "place": "南投縣"
    },
    {
@@ -674,7 +675,7 @@
     "url": "https://www.instagram.com/reel/DcA_PFnJIkA/",
     "img": "ig/18609094621049789.jpg",
     "date": "2026-08-14T09:41:29+0000",
-    "place": "合歡"
+    "place": "南投縣"
    },
    {
     "type": "video",
@@ -685,26 +686,10 @@
    },
    {
     "type": "reel",
-    "title": "Make your life spectacular.✨ #sunrise #t",
-    "url": "https://www.instagram.com/reel/Db5TM2epkjc/",
-    "img": "ig/18139512832598168.jpg",
-    "date": "2026-08-11T09:54:16+0000",
-    "place": "南投縣"
-   },
-   {
-    "type": "reel",
     "title": "我用運動相機錄下清境日出時的天空。#日出 #清境 #旅行 #南投 #台灣",
     "url": "https://www.instagram.com/reel/Db2yKUxJdM5/",
     "img": "ig/17972632055918265.jpg",
     "date": "2026-08-10T10:22:08+0000",
-    "place": "清境"
-   },
-   {
-    "type": "reel",
-    "title": "The mountain is awakening. ⛰️☁️ #sunrise",
-    "url": "https://www.instagram.com/reel/Db2puwcJwtF/",
-    "img": "ig/17927240253386404.jpg",
-    "date": "2026-08-10T09:10:19+0000",
     "place": "清境"
    },
    {
@@ -721,7 +706,7 @@
     "url": "https://www.instagram.com/p/DbsY8ASCd5c/",
     "img": "ig/18187323961393346.jpg",
     "date": "2026-08-06T09:26:50+0000",
-    "place": "合歡"
+    "place": "奇萊"
    },
    {
     "type": "reel",
@@ -729,14 +714,6 @@
     "url": "https://www.instagram.com/reel/DbqK1aPJXCL/",
     "img": "ig/18156561088498235.jpg",
     "date": "2026-08-05T12:47:38+0000",
-    "place": "合歡"
-   },
-   {
-    "type": "reel",
-    "title": "A day in the mountains for me. ⛰️ #mount",
-    "url": "https://www.instagram.com/reel/DbpxmBdp1xF/",
-    "img": "ig/18363734488209037.jpg",
-    "date": "2026-08-05T09:07:06+0000",
     "place": "合歡"
    },
    {
@@ -749,26 +726,10 @@
    },
    {
     "type": "reel",
-    "title": "A relaxing place in Nantou. #summer #tai",
-    "url": "https://www.instagram.com/reel/DbiHRf8ps0w/",
-    "img": "ig/18161844637478451.jpg",
-    "date": "2026-08-02T09:44:41+0000",
-    "place": "南投縣"
-   },
-   {
-    "type": "reel",
     "title": "日月潭一個讓人感到放鬆的角落。#日月潭 #南投 #旅行 #台灣 #taiwan",
     "url": "https://www.instagram.com/reel/DbfmuYop7WJ/",
     "img": "ig/17948610654032828.jpg",
     "date": "2026-08-01T10:18:25+0000",
-    "place": "日月潭"
-   },
-   {
-    "type": "reel",
-    "title": "The most beautiful lakeside highway in T",
-    "url": "https://www.instagram.com/reel/Dbfd7YaJQPd/",
-    "img": "ig/18022723925906977.jpg",
-    "date": "2026-08-01T09:05:56+0000",
     "place": "日月潭"
    },
    {
@@ -795,14 +756,6 @@
     "place": "合歡"
    },
    {
-    "type": "reel",
-    "title": "The most beautiful highway in Taiwan. 🇹",
-    "url": "https://www.instagram.com/reel/DbSoSmhpbuw/",
-    "img": "ig/17919563562411044.jpg",
-    "date": "2026-07-27T09:24:09+0000",
-    "place": "合歡"
-   },
-   {
     "type": "post",
     "title": "外星地表／Alien Surface 🪐",
     "url": "https://www.instagram.com/p/DbDNSMaCb66/",
@@ -824,14 +777,6 @@
     "img": "ig/17903216757465228.jpg",
     "date": "2026-07-19T10:12:43+0000",
     "place": "東埔"
-   },
-   {
-    "type": "reel",
-    "title": "I found a huge building in the mountains",
-    "url": "https://www.instagram.com/reel/Da44GcOpfAw/",
-    "img": "ig/18088520792550560.jpg",
-    "date": "2026-07-17T09:21:30+0000",
-    "place": "合歡"
    },
    {
     "type": "reel",
@@ -1075,7 +1020,7 @@
     "url": "https://www.instagram.com/reel/DXWXUr2CdFa/",
     "img": "ig/17934646539055144.jpg",
     "date": "2026-04-20T10:05:29+0000",
-    "place": "東埔"
+    "place": "南投縣"
    },
    {
     "type": "reel",
@@ -1163,14 +1108,6 @@
     "img": "ig/17904170046225889.jpg",
     "date": "2026-03-23T09:31:08+0000",
     "place": "塔塔加"
-   },
-   {
-    "type": "reel",
-    "title": "當你將機車停在了路旁望向右方，你會期待是什麼樣的風景呢？",
-    "url": "https://www.instagram.com/reel/DWL5PNnCTtQ/",
-    "img": "ig/18128048143495522.jpg",
-    "date": "2026-03-22T11:57:55+0000",
-    "place": "阿里山"
    },
    {
     "type": "reel",
@@ -1277,7 +1214,7 @@
     "id": "p4uQdGwlmGE",
     "title": "走進台灣百年歷史的古道「八通關古道」！建立在懸崖峭壁旁既危險又美麗的登山路線！【伐木累出遊 DAY3】｜ 八通關古道 雲龍瀑布｜【賴同學 Student Lai】",
     "date": "2025-11-29T12:01:39Z",
-    "place": "塔塔加"
+    "place": "玉山"
    },
    {
     "type": "video",
@@ -1362,6 +1299,34 @@
     "title": "去清境只要花50塊就可以看綿羊！？CP值超高？民宿看出去的風景超漂亮！｜清境高空景觀步道 & 眷戀山城｜獨旅系列 ep. 15 【賴同學 Student Lai】",
     "date": "2025-07-13T11:30:26Z",
     "place": "清境"
+   },
+   {
+    "type": "video",
+    "id": "QvQfGQCaFMU",
+    "title": "【騎行純享】陰天裡的騎行漫遊，最終與見了美麗的夕陽！｜沉靜式騎車：台16線 — 台21線｜ KYMCO Krv180 & DJI Action 5Pro 【4K 2160p】",
+    "date": "2025-06-23T09:45:42Z",
+    "place": "日月潭"
+   },
+   {
+    "type": "video",
+    "id": "QOzEdJYPteY",
+    "title": "南投去哪兒？去日月潭不去日月潭還能去哪？｜金針花海：出門賞花去｜禾軒 日月潭金針花園區｜feat. 伐木累【CC字幕】【賴同學 Student Lai】",
+    "date": "2025-06-21T09:00:41Z",
+    "place": "日月潭"
+   },
+   {
+    "type": "video",
+    "id": "sOA5_4GvKPc",
+    "title": "【獨旅系列】因脆皮蛋餅而促成的一趟旅行。 | 南投一日遊 🛵💨 | 阿根早點 車埕車站 日月潭 石觀音吊橋 明潭水庫",
+    "date": "2025-01-28T09:54:30Z",
+    "place": "日月潭"
+   },
+   {
+    "type": "video",
+    "id": "IhTWE9QgUQs",
+    "title": "【獨旅系列】走訪山林中的神秘道路 台16線丹大林道",
+    "date": "2025-01-18T06:39:59Z",
+    "place": "南投縣"
    }
   ],
   "嘉義縣": [
@@ -1387,15 +1352,7 @@
     "url": "https://www.instagram.com/reel/Dd_NVECJ4Ni/",
     "img": "ig/18120419281734386.jpg",
     "date": "2026-10-02T09:55:35+0000",
-    "place": "合歡"
-   },
-   {
-    "type": "reel",
-    "title": "Chiayi, Taiwan. 🌲 #nature #photography ",
-    "url": "https://www.instagram.com/reel/DcnRKrvJnoK/",
-    "img": "ig/18231784447319322.jpg",
-    "date": "2026-08-29T06:16:20+0000",
-    "place": "嘉義縣"
+    "place": "水里"
    },
    {
     "type": "reel",
@@ -1403,7 +1360,7 @@
     "url": "https://www.instagram.com/reel/DclDVd1JhSv/",
     "img": "ig/17859301491696646.jpg",
     "date": "2026-08-28T09:36:41+0000",
-    "place": "阿里山"
+    "place": "嘉義縣"
    },
    {
     "type": "post",
@@ -1437,14 +1394,6 @@
     "place": "阿里山"
    },
    {
-    "type": "reel",
-    "title": "I finally found the sunset and the sky. ",
-    "url": "https://www.instagram.com/reel/DbIVCUEplTy/",
-    "img": "ig/17875421490686759.jpg",
-    "date": "2026-07-23T09:23:10+0000",
-    "place": "阿里山"
-   },
-   {
     "type": "post",
     "title": "閃耀／Shining",
     "url": "https://www.instagram.com/p/DaxhsSgiaGG/",
@@ -1459,14 +1408,6 @@
     "img": "ig/18060120872736438.jpg",
     "date": "2026-07-11T10:11:58+0000",
     "place": "阿里山"
-   },
-   {
-    "type": "reel",
-    "title": "回顧了這一年多以來走過的台灣，每一片風景都讓我看見了台灣的美麗。",
-    "url": "https://www.instagram.com/reel/DYUF5G4pq9v/",
-    "img": "ig/18582669028003839.jpg",
-    "date": "2026-05-14T09:40:07+0000",
-    "place": "合歡"
    },
    {
     "type": "post",
@@ -1596,13 +1537,6 @@
    },
    {
     "type": "video",
-    "id": "p4uQdGwlmGE",
-    "title": "走進台灣百年歷史的古道「八通關古道」！建立在懸崖峭壁旁既危險又美麗的登山路線！【伐木累出遊 DAY3】｜ 八通關古道 雲龍瀑布｜【賴同學 Student Lai】",
-    "date": "2025-11-29T12:01:39Z",
-    "place": "塔塔加"
-   },
-   {
-    "type": "video",
     "id": "yhytMFAjDHM",
     "title": "都騎車來到了阿里山怎麼能不去看日出呢！塔塔加的森林步道真的超美！【伐木累出遊 DAY2】｜嘉義阿里山 & 南投信義｜【賴同學 Student Lai】",
     "date": "2025-11-22T12:01:56Z",
@@ -1649,17 +1583,72 @@
     "title": "遇到道路封閉怎麼辦？那就調轉車頭，不看地圖來一場山間遨遊的冒險！｜清水溪橋、龍眼村龍興宮、碧湖山茶園 & 太平36彎｜【不看Google地圖去旅行 ep.2】【賴同學 Student Lai】",
     "date": "2025-08-24T10:01:13Z",
     "place": "太平雲梯"
+   },
+   {
+    "type": "video",
+    "id": "JvMjF50J7gA",
+    "title": "不看Google地圖成功抵達了白水湖壽島！？｜不看Google地圖去旅行：出發去看海 ep.1（下）【CC字幕】【賴同學 Student Lai】",
+    "date": "2025-07-08T10:00:36Z",
+    "place": "嘉義縣"
+   },
+   {
+    "type": "video",
+    "id": "Cq9gq2bhfFo",
+    "title": "不看Google地圖去旅行，到底能否成功抵達目的地？｜不看Google地圖去旅行：出發去看海 ep.1（上）【CC字幕】【賴同學 Student Lai】",
+    "date": "2025-07-04T22:00:22Z",
+    "place": "嘉義縣"
+   },
+   {
+    "type": "video",
+    "id": "0O5S7YYrDno",
+    "title": "【騎行純享】這樣的山路真的愛了！ | 沉靜式騎車：阿里山公路 奮起湖 – 隙頂 | KYMCO KRV180 | DJI Action 5Pro",
+    "date": "2025-06-10T10:15:14Z",
+    "place": "阿里山"
+   },
+   {
+    "type": "video",
+    "id": "IbQmV1ZsPKA",
+    "title": "【獨旅系列】走十次九次塞的美麗公路！台18線 阿里山公路！意外發現多林車站！？ | 多林車站 奮起湖 阿里山公路 隙頂 | 部落之旅（三） 【CC字幕】",
+    "date": "2025-06-06T10:30:41Z",
+    "place": "阿里山"
+   },
+   {
+    "type": "video",
+    "id": "Pq5rGWvBDyc",
+    "title": "【騎行純享】穿梭於山林之中，前往得恩亞納部落！ | 沉靜式騎車：來吉 – 得恩亞納 | #krv #djiaction5pro",
+    "date": "2025-06-04T10:21:26Z",
+    "place": "阿里山"
+   },
+   {
+    "type": "video",
+    "id": "5rHx93c085Q",
+    "title": "【騎行純享】一條鮮為人知的美麗公路！沉靜式騎車 – 縣道149甲 | 草嶺 – 來吉 #krv #機車旅行",
+    "date": "2025-05-29T09:42:24Z",
+    "place": "嘉義縣"
+   },
+   {
+    "type": "video",
+    "id": "xC5UD0Y3JR0",
+    "title": "【獨旅系列】前進山豬的故鄉，來吉！草嶺公路真的太美了！ | 山豬公園 草嶺公路 來吉 | 部落之旅（一）【CC字幕】#krv #機車旅行",
+    "date": "2025-05-21T10:46:37Z",
+    "place": "阿里山"
+   },
+   {
+    "type": "video",
+    "id": "bCiX0gK526c",
+    "title": "【獨旅系列】走完青年嶺步道我已不再是青年，我是奧笑連 | 嘉義瑞里青年嶺步道 | 走訪情人橋、燕子崖和蝙蝠洞 | 走階梯走到怕的一天【CC字幕】",
+    "date": "2025-05-15T11:26:21Z",
+    "place": "瑞里"
+   },
+   {
+    "type": "video",
+    "id": "4YAeketWfiw",
+    "title": "【機車旅行】塞車的阿里山公路 | 來去奮起湖呷便當 | feat. 老吉",
+    "date": "2025-04-20T13:05:05Z",
+    "place": "阿里山"
    }
   ],
   "臺中市": [
-   {
-    "type": "reel",
-    "title": "Live in nature.🌿 #nature #forest #hikin",
-    "url": "https://www.instagram.com/reel/Ddp6OQvJdI5/",
-    "img": "ig/18110219357615586.jpg",
-    "date": "2026-09-24T03:23:38+0000",
-    "place": "臺中市"
-   },
    {
     "type": "video",
     "id": "t73GQxG-GxI",
@@ -1769,14 +1758,6 @@
     "place": "梨山"
    },
    {
-    "type": "reel",
-    "title": "回顧了這一年多以來走過的台灣，每一片風景都讓我看見了台灣的美麗。",
-    "url": "https://www.instagram.com/reel/DYUF5G4pq9v/",
-    "img": "ig/18582669028003839.jpg",
-    "date": "2026-05-14T09:40:07+0000",
-    "place": "合歡"
-   },
-   {
     "type": "video",
     "id": "AsTNgqjqcks",
     "title": "谷關七雄展望之王！東卯山步道全紀錄：平緩好走的 Z 字型坡，適合新手的 15K 體能測試。｜台中和平區 谷關東卯山｜【賴同學 Student Lai】",
@@ -1789,7 +1770,7 @@
     "url": "https://www.instagram.com/reel/DXL_VYxCS2n/",
     "img": "ig/17921117940322447.jpg",
     "date": "2026-04-16T09:23:25+0000",
-    "place": "谷關"
+    "place": "臺中市"
    },
    {
     "type": "reel",
@@ -1947,6 +1928,66 @@
     "img": "ig/18216282250316713.jpg",
     "date": "2026-04-05T09:11:11+0000",
     "place": "墾丁"
+   },
+   {
+    "type": "video",
+    "id": "r9C97CLoAIw",
+    "title": "【機車旅行】毫無顧忌的旅行 | 屏東騎旅兩天一夜：一路向北 | feat. 老吉",
+    "date": "2025-03-19T10:46:30Z",
+    "place": "屏東縣"
+   },
+   {
+    "type": "video",
+    "id": "01Jx6X_0nFw",
+    "title": "【機車旅行】與山相鄰，與海相伴。 | 屏東騎旅兩天一夜：國境之南 | feat. 老吉",
+    "date": "2025-03-04T12:08:02Z",
+    "place": "屏東縣"
+   },
+   {
+    "type": "video",
+    "id": "l0PN3QE5izM",
+    "title": "【機車旅行】旅途中總是充滿著驚險與未知。 | 屏東騎旅兩天一夜：泥濘之路 | feat. 老吉",
+    "date": "2025-02-25T11:37:22Z",
+    "place": "屏東縣"
+   },
+   {
+    "type": "video",
+    "id": "EhdFO44TxxM",
+    "title": "【機車旅行】DAY2 屏東➡️雲林。二天一夜的機車騎行之旅（下）。「風景很美，風也很大。」",
+    "date": "2025-01-13T16:36:53Z",
+    "place": "屏東縣"
+   },
+   {
+    "type": "video",
+    "id": "7XvSN3HxDHI",
+    "title": "【機車旅行】雲林➡️屏東。兩天一夜的機車騎行之旅（上）。",
+    "date": "2025-01-12T14:16:48Z",
+    "place": "屏東縣"
+   }
+  ],
+  "苗栗縣": [
+   {
+    "type": "video",
+    "id": "dfS3UrxKtZk",
+    "title": "【獨旅系列】旅途是否迎來曙光呢 | 219公里的回家路（下） | 苗栗 – 雲林",
+    "date": "2025-04-11T10:58:17Z",
+    "place": "苗栗縣"
+   },
+   {
+    "type": "video",
+    "id": "49Npo-IjMZI",
+    "title": "【獨旅系列】雨中的浪漫台三線 | 219公里的回家路（上）| 桃園 — 苗栗",
+    "date": "2025-04-04T09:02:12Z",
+    "place": "苗栗縣"
+   }
+  ],
+  "桃園市": [
+   {
+    "type": "video",
+    "id": "49Npo-IjMZI",
+    "title": "【獨旅系列】雨中的浪漫台三線 | 219公里的回家路（上）| 桃園 — 苗栗",
+    "date": "2025-04-04T09:02:12Z",
+    "place": "桃園市"
    }
   ],
   "宜蘭縣": [
@@ -1968,11 +2009,10 @@
    "date": "2025-09-06T10:01:22Z"
   },
   {
-   "type": "reel",
-   "title": "Walking into the mountains.⛰️ #mountains",
-   "url": "https://www.instagram.com/reel/DfMuTvYpk0y/",
-   "img": "ig/18137058196734710.jpg",
-   "date": "2026-11-01T12:25:35+0000"
+   "type": "video",
+   "id": "EADR4wjVwwQ",
+   "title": "【獨旅系列】走進潛藏在山中的神秘部落「得恩亞納」！備受感悟的一集！ | 來吉村 塔山群峰 多林聯絡道 得恩亞納 | 部落之旅（二）【CC字幕】",
+   "date": "2025-05-28T09:56:05Z"
   },
   {
    "type": "reel",
@@ -1990,52 +2030,10 @@
   },
   {
    "type": "reel",
-   "title": "Jurassic Park in Taiwan.🦖 #nature #wate",
-   "url": "https://www.instagram.com/reel/DdLv-GxpjZu/",
-   "img": "ig/18090300287656552.jpg",
-   "date": "2026-09-12T10:17:48+0000"
-  },
-  {
-   "type": "reel",
-   "title": "Migratory birds in Taiwan. #bird #nature",
-   "url": "https://www.instagram.com/reel/DdEUuwmJ0c2/",
-   "img": "ig/18106821719232143.jpg",
-   "date": "2026-09-09T13:04:01+0000"
-  },
-  {
-   "type": "reel",
-   "title": "I just woke up from nature.🌲 #travel #s",
-   "url": "https://www.instagram.com/reel/Dca1Fe4J-Dy/",
-   "img": "ig/18132626593654521.jpg",
-   "date": "2026-08-24T10:19:39+0000"
-  },
-  {
-   "type": "reel",
-   "title": "I just woke up from nature.🌲 #travel #s",
-   "url": "https://www.instagram.com/reel/DcavM6iJ_Wl/",
-   "img": "ig/18073967372399741.jpg",
-   "date": "2026-08-24T09:28:48+0000"
-  },
-  {
-   "type": "reel",
-   "title": "Take me to Taiwan. 🇹🇼",
-   "url": "https://www.instagram.com/reel/DcS-Rs-JtvY/",
-   "img": "ig/17894284179598969.jpg",
-   "date": "2026-08-21T09:04:57+0000"
-  },
-  {
-   "type": "reel",
    "title": "試著讓你的人生過的精彩絕倫。 #旅行 #語錄 #風景 #台灣 #日出",
    "url": "https://www.instagram.com/reel/Db5aaBIp1gy/",
    "img": "ig/18140001010573425.jpg",
    "date": "2026-08-11T10:51:49+0000"
-  },
-  {
-   "type": "reel",
-   "title": "I found some peace in Taiwan. 🇹🇼 #taiw",
-   "url": "https://www.instagram.com/reel/Dauk0msJzsF/",
-   "img": "ig/17926739709364263.jpg",
-   "date": "2026-07-13T09:18:31+0000"
   },
   {
    "type": "reel",
@@ -2046,38 +2044,10 @@
   },
   {
    "type": "reel",
-   "title": "I visited many places in Taiwan. 🇹🇼 #t",
-   "url": "https://www.instagram.com/reel/DaAxlpTJXwC/",
-   "img": "ig/18121253557688364.jpg",
-   "date": "2026-06-25T14:30:54+0000"
-  },
-  {
-   "type": "reel",
-   "title": "I found clouds and light after the rain.",
-   "url": "https://www.instagram.com/reel/DZheE17JakX/",
-   "img": "ig/18355320523240389.jpg",
-   "date": "2026-06-13T10:40:47+0000"
-  },
-  {
-   "type": "reel",
    "title": "如果台灣的風景變成了4k高清。🇹🇼",
    "url": "https://www.instagram.com/reel/DZZmKavpEHy/",
    "img": "ig/17899283808305017.jpg",
    "date": "2026-06-10T09:15:47+0000"
-  },
-  {
-   "type": "reel",
-   "title": "144p Taiwan vs 4k Taiwan 🇹🇼 #taiwan #4",
-   "url": "https://www.instagram.com/reel/DZZOf2apIdB/",
-   "img": "ig/18183237328389583.jpg",
-   "date": "2026-06-10T05:50:21+0000"
-  },
-  {
-   "type": "reel",
-   "title": "Hehuan Mountain ⛰️",
-   "url": "https://www.instagram.com/reel/DYPUwk4JL4C/",
-   "img": "ig/18102712153960549.jpg",
-   "date": "2026-05-12T13:00:59+0000"
   },
   {
    "type": "reel",
