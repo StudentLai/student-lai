@@ -37,12 +37,12 @@ export function classify(text) {
 }
 // 依序嘗試多段文字，第一段就判斷得出縣市就停（例如影片：先看標題，再看說明開頭，最後才看全文），避免說明裡的其他影片連結造成誤判
 export const classifyTiered = tiers => { for (const t of tiers) { const r = classify(t); if (r.counties.length) return r; } return { counties: [], place: '', why: [] }; };
-// 判斷地點的順序：①你標記的地點行（含 📍、📌、「地點」、Location 的那一行）→ ②標題／第一行 → ③hashtag → ④說明前 200 字 → ⑤全文
+// 判斷地點的順序：①你標記的地點行（含 📍、📌、「地點」、Location 的那一行）→ ②hashtag → ③標題／第一行 → ④說明前 200 字 → ⑤全文
 // 前面的步驟只要判斷得出縣市就停，不再往後看
 export function captionTiers(first, body) {
   const loc = body.split('\n').filter(l => /📍|📌|地點|拍攝地|location/i.test(l)).join('\n');
   const tags = ((first + '\n' + body).match(/#[^\s#]+/g) || []).join(' ');
-  return [loc, first, tags, body.slice(0, 200), body].filter(Boolean);
+  return [loc, tags, first, body.slice(0, 200), body].filter(Boolean);
 }
 // 說明去掉 hashtag、@帳號、網址後，如果完全沒有中文、英文字母夠多，就當成英文說明
 export function isEnglish(cap) {
