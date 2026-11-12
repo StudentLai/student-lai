@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const EXCLUDE_MARKERS = ['#試驗'];                  // Instagram 說明裡有這些標記的內容不收（例如試驗 Reels 的說明加上 #試驗）
-const HIDE_REELS_NOT_IN_FEED = false;              // 實驗用：true＝略過「沒有分享到動態」的 Reels（是否能擋掉試驗 Reels，要先看執行紀錄確認）
+const SKIP_ENGLISH_REELS = true;                // 說明是英文的 Reels 視為試驗 Reels，不收（想收就改成 false）
 const INCLUDE_REELS = true;                        // 是否收一般 Instagram Reels（true＝收，會獨立成一個分頁）
 const CHANNEL_ID = 'UCm5DmxNXdwovJmy_e1kxm3A';   // 你的 YouTube 頻道 ID
 const { YT_API_KEY, IG_TOKEN } = process.env;
@@ -36,7 +36,19 @@ export function classify(text) {
   return { counties: [...set], place, why };
 }
 // 依序嘗試多段文字，第一段就判斷得出縣市就停（例如影片：先看標題，再看說明開頭，最後才看全文），避免說明裡的其他影片連結造成誤判
-const classifyTiered = tiers => { for (const t of tiers) { const r = classify(t); if (r.counties.length) return r; } return { counties: [], place: '', why: [] }; };
+export const classifyTiered = tiers => { for (const t of tiers) { const r = classify(t); if (r.counties.length) return r; } return { counties: [], place: '', why: [] }; };
+// 判斷地點的順序：①你標記的地點行（含 📍、📌、「地點」、Location 的那一行）→ ②標題／第一行 → ③hashtag → ④說明前 200 字 → ⑤全文
+// 前面的步驟只要判斷得出縣市就停，不再往後看
+export function captionTiers(first, body) {
+  const loc = body.split('\n').filter(l => /📍|📌|地點|拍攝地|location/i.test(l)).join('\n');
+  const tags = ((first + '\n' + body).match(/#[^\s#]+/g) || []).join(' ');
+  return [loc, first, tags, body.slice(0, 200), body].filter(Boolean);
+}
+// 說明去掉 hashtag、@帳號、網址後，如果完全沒有中文、英文字母夠多，就當成英文說明
+export function isEnglish(cap) {
+  const t = cap.replace(/#[^\s#]+|@[\w.]+|https?:\/\/\S+/g, '');
+  return !/[\u4e00-\u9fff]/.test(t) && (t.match(/[A-Za-z]/g) || []).length >= 10;
+}
 async function loadTowns() {   // 盡力而為：載入全台鄉鎮名稱，失敗就略過
   try {
     const r = await fetch('https://cdn.jsdelivr.net/npm/taiwan-atlas/towns-10t.json');
@@ -59,19 +71,19 @@ async function isShort(id, sec) {
   catch { return sec <= 60; }
 }
 async function ytVideos() {
-  if (!YT_API_KEY) { console.log('略過 YouTube（沒有 YT_API_KEY）'); return []; }
+  if (!YT_API_KEY) { console.log('略過 YouTube（沒有 YT_API_KEY），沿用上次的內容'); return null; }
   const api = (path, q) => fetch(`https://www.googleapis.com/youtube/v3/${path}?${q}&key=${YT_API_KEY}`).then(async r => {
     if (!r.ok) throw new Error('YouTube API ' + r.status + ' ' + (await r.text()).slice(0, 300));
     return r.json();
   });
   const list = 'UU' + CHANNEL_ID.slice(2);          // 頻道的「上傳影片」播放清單
   const all = []; let token = '';
-  for (let i = 0; i < 8; i++) {                      // 最多 400 支
+  for (let i = 0; i < 20; i++) {                     // 最多 1000 支
     const j = await api('playlistItems', `part=snippet&maxResults=50&playlistId=${list}` + (token ? `&pageToken=${token}` : ''));
     for (const it of j.items || []) {
       const s = it.snippet;
       if (/^(Private|Deleted) video$/.test(s.title)) continue;
-      all.push({ id: s.resourceId.videoId, title: s.title, tiers: [s.title, s.title + '\n' + (s.description || '').slice(0, 200), s.title + '\n' + (s.description || '')], date: s.publishedAt });
+      all.push({ id: s.resourceId.videoId, title: s.title, tiers: captionTiers(s.title, s.description || ''), date: s.publishedAt });
     }
     token = j.nextPageToken; if (!token) break;
   }
@@ -92,17 +104,22 @@ async function ytVideos() {
 
 // ---------- Instagram（貼文與 Reels 分開） ----------
 async function igPosts() {
-  if (!IG_TOKEN) { console.log('略過 Instagram（沒有 IG_TOKEN）'); return []; }
-  try { await fetch(`https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${IG_TOKEN}`); } catch {}   // 順便延長權杖效期
+  if (!IG_TOKEN) { console.log('略過 Instagram（沒有 IG_TOKEN），沿用上次的內容'); return null; }
   fs.mkdirSync('ig', { recursive: true });
   const fields = 'id,caption,media_type,media_url,thumbnail_url,permalink,timestamp';
   let url = `https://graph.instagram.com/me/media?fields=${fields}&limit=50&access_token=${IG_TOKEN}`;
-  const out = [];
+  const out = []; let skipped = 0;
   for (let i = 0; i < 4 && url; i++) {               // 最多 200 則
     const r = await fetch(url);
     if (!r.ok) throw new Error('Instagram API ' + r.status + ' ' + (await r.text()).slice(0, 300));
     const j = await r.json();
     for (const m of j.data || []) {
+      const cap = m.caption || '';
+      const first = (cap.split('\n').find(l => l.trim()) || 'Instagram').trim();
+      const isReel = /\/reel\//.test(m.permalink || '');   // Reels 的網址是 /reel/，一般貼文是 /p/
+      if (isReel && !INCLUDE_REELS) continue;
+      if (isReel && SKIP_ENGLISH_REELS && isEnglish(cap)) { skipped++; console.log('  略過英文說明的 Reels（視為試驗 Reels）：', m.permalink); continue; }
+      if (EXCLUDE_MARKERS.some(k => cap.includes(k))) continue;
       const cover = m.media_type === 'VIDEO' ? m.thumbnail_url : m.media_url;   // IG 圖片網址會過期，所以下載存進 ig/
       let img = '';
       if (cover) {
@@ -110,29 +127,25 @@ async function igPosts() {
         if (!fs.existsSync(file)) { const ir = await fetch(cover); if (ir.ok) fs.writeFileSync(file, Buffer.from(await ir.arrayBuffer())); }
         if (fs.existsSync(file)) img = file;
       }
-      const cap = m.caption || '';
-      const title = (cap.split('\n').find(l => l.trim()) || 'Instagram').trim().slice(0, 40);
-      const isReel = /\/reel\//.test(m.permalink || '');   // Reels 的網址是 /reel/，一般貼文是 /p/
-      if (isReel && !INCLUDE_REELS) continue;
-      if (EXCLUDE_MARKERS.some(k => cap.includes(k))) continue;
-      if (isReel) {   // 列出所有 Reels 的網址與「是否分享到動態」，方便你挑出不要的
-        let shared;
-        try { shared = (await (await fetch(`https://graph.instagram.com/${m.id}?fields=is_shared_to_feed&access_token=${IG_TOKEN}`)).json()).is_shared_to_feed; } catch {}
-        console.log('  Reels：', m.permalink, '｜', title, '｜分享到動態：', shared);
-        if (HIDE_REELS_NOT_IN_FEED && shared === false) continue;
-      }
-      out.push({ type: isReel ? 'reel' : 'post', title, text: cap, url: m.permalink, img, date: m.timestamp });
+      out.push({ type: isReel ? 'reel' : 'post', title: first.slice(0, 40), tiers: captionTiers(first, cap), url: m.permalink, img, date: m.timestamp });
     }
     url = j.paging?.next;
   }
-  console.log(`Instagram：${out.filter(x => x.type === 'post').length} 則貼文` + (INCLUDE_REELS ? `、${out.filter(x => x.type === 'reel').length} 支 Reels` : '（已略過 Reels）'));
+  console.log(`Instagram：${out.filter(x => x.type === 'post').length} 則貼文、${out.filter(x => x.type === 'reel').length} 支 Reels，略過 ${skipped} 支英文 Reels`);
   return out;
 }
 
 // ---------- 主程式 ----------
 async function main() {
   await loadTowns();
-  const items = [...await ytVideos(), ...await igPosts()];   // 任一邊失敗會直接結束，不覆蓋舊的 travels.json
+  // 任一邊失敗時，另一邊照常更新；失敗那一邊沿用上次 travels.json 裡的舊內容，並讓這次執行顯示失敗（GitHub 會寄通知給你）
+  // 略過（沒設定金鑰）或失敗的那一邊，沿用上次 travels.json 的內容；只有「失敗」才會讓這次執行顯示紅色
+  const carry = new Set(), failed = new Set(); let yt = [], ig = [];
+  try { yt = await ytVideos(); if (yt === null) { yt = []; carry.add('video'); } }
+  catch (e) { console.error('YouTube 失敗：', e.message); failed.add('video'); carry.add('video'); }
+  try { ig = await igPosts(); if (ig === null) { ig = []; carry.add('post'); carry.add('reel'); } }
+  catch (e) { console.error('Instagram 失敗：', e.message); failed.add('post'); failed.add('reel'); carry.add('post'); carry.add('reel'); }
+  const items = [...yt, ...ig];
   const counties = {}, unmatched = [];
   for (const it of items) {
     const ov = OVERRIDES[it.url] || OVERRIDES[it.id];
@@ -141,6 +154,11 @@ async function main() {
     if (!found.counties.length) { unmatched.push(rest); continue; }
     for (const c of found.counties) { (counties[c] ||= []).push({ ...rest, place: found.place || c }); console.log(`  → ${c}｜${rest.title}｜命中：${found.why.join('、')}｜${rest.url || rest.id}`); }
   }
+  if (carry.size) {
+    const prev = readJSON('travels.json', { counties: {} });
+    for (const [c, list] of Object.entries(prev.counties || {})) for (const it of list) if (carry.has(it.type)) (counties[c] ||= []).push(it);
+  }
+  if (failed.size) process.exitCode = 1;
   for (const c in counties) counties[c].sort((a, b) => b.date.localeCompare(a.date));
   fs.writeFileSync('travels.json', JSON.stringify({ updated: new Date().toISOString(), counties, unmatched }, null, 1));
   console.log(`完成：${items.length} 筆內容，${Object.keys(counties).length} 個縣市，${unmatched.length} 筆未分類`);
