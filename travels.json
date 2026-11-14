@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T21:02:19.303Z",
+ "updated": "2026-11-14T20:50:38.426Z",
  "counties": {
   "花蓮縣": [
    {
@@ -488,6 +488,14 @@
    }
   ],
   "南投縣": [
+   {
+    "type": "post",
+    "title": "山的獎勵／Mountain Rewards",
+    "url": "https://www.instagram.com/p/Dft0SxtiVeF/",
+    "img": "ig/18034864580683687.jpg",
+    "date": "2026-11-14T08:50:41+0000",
+    "place": "玉山"
+   },
    {
     "type": "reel",
     "title": "一分鐘帶你走進南投百年歷史的八通關古道。⛰️ #南投 #登山 #風景 #步道 #",
@@ -1510,14 +1518,6 @@
     "url": "https://www.instagram.com/p/DUX2irzCRaq/",
     "img": "ig/17943243078103500.jpg",
     "date": "2026-02-05T10:21:42+0000",
-    "place": "嘉義縣"
-   },
-   {
-    "type": "reel",
-    "title": "陽光和微風指引著我走向更遙遠的地方，與每一片美好的風景相遇。",
-    "url": "https://www.instagram.com/reel/DUXuwBlgQCu/",
-    "img": "ig/17844171684686345.jpg",
-    "date": "2026-02-05T09:14:59+0000",
     "place": "嘉義縣"
    },
    {
