@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T20:56:05.789Z",
+ "updated": "2026-11-23T21:02:42.740Z",
  "counties": {
   "南投縣": [
    {
@@ -726,14 +726,6 @@
     "place": "日月潭"
    },
    {
-    "type": "reel",
-    "title": "行走在森林裡的我發現了那絕美的日月潭。",
-    "url": "https://www.instagram.com/reel/DUiG0ZiCUk8/",
-    "img": "ig/17986160699936311.jpg",
-    "date": "2026-02-09T09:57:27+0000",
-    "place": "日月潭"
-   },
-   {
     "type": "video",
     "id": "zbb3DwBxOUk",
     "title": "登上日月潭最高峰！因為太過凶險而被小百岳除名？陡的上去抖的下來 叫大山的真的都不簡單啊！｜南投魚池 水社大山｜【賴同學 Student Lai】",
@@ -986,6 +978,14 @@
    }
   ],
   "雲林縣": [
+   {
+    "type": "reel",
+    "title": "我鏡頭下的台灣日常。#雲林 #攝影 #風景 #taiwan #台灣",
+    "url": "https://www.instagram.com/reel/DgE9S4oBFd1/",
+    "img": "ig/17983511181171310.jpg",
+    "date": "2026-11-23T08:32:51+0000",
+    "place": "雲林縣"
+   },
    {
     "type": "video",
     "id": "a3uWHLcntn4",
@@ -1353,6 +1353,14 @@
    }
   ],
   "嘉義縣": [
+   {
+    "type": "reel",
+    "title": "喜歡喝茶的我來到了茶葉產地。🌱 #茶園 #嘉義 #旅行 #攝影 #taiwan",
+    "url": "https://www.instagram.com/reel/DgFC-cgBZLf/",
+    "img": "ig/18646747090041117.jpg",
+    "date": "2026-11-23T09:23:41+0000",
+    "place": "嘉義縣"
+   },
    {
     "type": "reel",
     "title": "別把以後再說，變成了一輩子的遺憾。",
@@ -2072,13 +2080,6 @@
    "url": "https://www.instagram.com/p/DVLpjdgCcnv/",
    "img": "ig/18571266583018691.jpg",
    "date": "2026-02-25T13:08:43+0000"
-  },
-  {
-   "type": "reel",
-   "title": "那一天獨自走過了15座山頭，是一段漫長的旅程，也是對於自我的挑戰。",
-   "url": "https://www.instagram.com/reel/DUkqeyaCWc0/",
-   "img": "ig/18082455464264994.jpg",
-   "date": "2026-02-10T09:49:00+0000"
   }
  ]
 }
